@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class Animal {
+        constructor(name) {
+          this.name = name
+        }
+        sayHi() {
+          return `My name is ${this.name}`
+        }
+      }
+
+      class Cat extends Animal {
+        constructor(name) {
+          super(name) // 调用父类的constructor(name)
+          console.log(this.name)
+        }
+        sayHi() {
+          return "Meow," + super.sayHi() // 调用父类的SayHi()
+        }
+      }
+
+      let a = new Animal("Jack")
+      let c = new Car("Tom")
+
+      console.log(c.sayHi())
+      console.log(a.sayHi())
+    </script>
+  </body>
+</html>
