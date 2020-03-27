@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+      dataList = [
+        { name: "张三" },
+        { code: 1 },
+        { name: "张三" },
+        { code: 1 },
+        { name: "张三" },
+        { code: 1 },
+        { name: "张三" },
+        { code: 1 }
+      ]
+
+      dataList.forEach(item => {
+        axios.get("http").then(res => {
+          console.log(res)
+        })
+      })
+    </script>
+  </body>
+</html>
