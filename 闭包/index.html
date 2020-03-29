@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function doit() {}
+      console.log(doit.name);
+
+      // 要理解闭包，首先要清除js的作用域与其他的语言其实不太一样。
+      // 变量的作用域：全局作用域和局部作用域
+      // Javascript语言的特殊之处，就在于函数内部可以直接读取全局变量。
+
+      function createCounter() {
+        let index = 0;
+        function counter() {
+          index += 1;
+          return index;
+        }
+        return counter;
+      }
+      const counter = createCounter();
+      console.log(counter(), counter());
+    </script>
+  </body>
+</html>

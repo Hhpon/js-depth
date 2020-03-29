@@ -8,24 +8,24 @@
   <body>
     <script>
       var Singleton = function(name) {
-        this.name = name
-        this.instance = null
-      }
+        this.name = name;
+        this.instance = null;
+      };
       Singleton.prototype.getName = function() {
-        alert(this.name)
-      }
+        alert(this.name);
+      };
       Singleton.getInstance = function(name) {
         console.log(this.instance);
         if (!this.instance) {
-          this.instance = new Singleton(name)
+          this.instance = new Singleton(name);
         }
-        return this.instance
-      }
+        return this.instance;
+      };
 
-      var a = Singleton.getInstance("sven1")
-      var b = Singleton.getInstance("sven2")
+      var a = Singleton.getInstance('sven1');
+      var b = Singleton.getInstance('sven2');
 
-      console.log(a, b)
+      console.log(a, b);
     </script>
   </body>
 </html>
