@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 其实不太符合单一职责原则
+      var CreateDiv = (function() {
+        var instance
+
+        var CreateDiv = function(html) {
+          if (instance) {
+            return instance
+          }
+          this.html = html
+          this.init()
+          return (instance = this)
+        }
+        CreateDiv.prototype.init = function() {
+          var div = document.createElement("div")
+          div.innerHTML = this.html
+          document.body.appendChild(div)
+        }
+        return CreateDiv
+      })()
+
+      var a = new CreateDiv("sven1")
+      var b = new CreateDiv("sven2")
+
+      console.log(a, b)
+
+      alert(a === b) // true
+    </script>
+  </body>
+</html>
