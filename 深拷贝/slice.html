@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // info 为数组对象，所以普通的数组深拷贝方法不能适用
+      const info = [
+        { name: "andy", age: 50 },
+        { name: "cat", age: 60 },
+      ]
+      const newInfo = info.slice(0)
+      newInfo.forEach((ele, index) => {
+        ele.index = index
+      })
+      console.log(info)
+      console.log(newInfo)
+      // 数组对象深拷贝的方法
+
+      const deepCopy = (obj) => {
+        let result = Array.isArray(obj) ? [] : {}
+        for (let key in obj) {
+          if (obj.hasOwnProperty(key)) {
+            if (typeof obj[key] === "object") {
+              result[key] = this.deepCopy(obj[key])
+            } else {
+              result[key] = obj[key]
+            }
+          }
+        }
+        return result
+      }
+    </script>
+  </body>
+</html>
