@@ -33,6 +33,21 @@
         }
         return result
       }
+
+      const opt = { name: "andy", age: 50 }
+      const { ...newOpt } = opt
+      newOpt.name = "hhp"
+      console.log(opt)
+      console.log(newOpt)
+
+      const newInfo1 = []
+      info.forEach((ele, index) => {
+        const { ...newEle } = ele
+        newEle.index = index
+        newInfo1.push(newEle)
+      })
+      console.log(info)
+      console.log(newInfo1)
     </script>
   </body>
 </html>
