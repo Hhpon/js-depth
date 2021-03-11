@@ -52,18 +52,24 @@ function cloneOtherType(obj, type) {
     case numberTag:
     case stringTag:
     case errorTag:
-      return new Ctor(obj)
+      return new obj.constructor(obj)
     case regexpTag:
       return copyReg(obj)
-    case sumbolTag:
-      return cloneSymbol(obj)
+    case symbolTag:
+      return copySymbol(obj)
     default:
       return null
   }
 }
 
-function copyReg(obj){
-  const reFla
+function copySymbol(obj) {
+  return Object(Symbol.prototype.valueOf.call(obj))
+}
+
+function copyReg(obj) {
+  const result = new obj.constructor(obj.source, /\w*$/.exec(obj))
+  result.lastIndex = obj.lastIndex
+  return result
 }
 
 /**
@@ -84,8 +90,11 @@ function deepCopy(obj, map = new Map()) {
   if (deepTag.includes(typeTag)) {
     result = getInit(obj)
   } else {
+    return cloneOtherType(obj, typeTag)
   }
 
+  // 防止循环引用的情况消耗光栈内存
+  // 对已经拷贝过的value做个标记
   if (map.get(obj)) {
     return map.get(obj)
   }
@@ -119,10 +128,11 @@ let a = {
   song: ["冰雨", "忘情水", "今天"],
   sun: {
     name: "tom",
-    birthday: Date(),
+    birthday: new Date(),
     music: new RegExp("abc"),
   },
   goods: new Set(),
+  symbol: Object(Symbol("symbol")),
 }
 
 a.a = a
