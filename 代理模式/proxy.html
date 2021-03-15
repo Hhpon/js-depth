@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>使用代理模式实现图片懒加载</title>
+  </head>
+  <body>
+    <script>
+      var myImage = (function () {
+        var imgNode = document.createElement("img")
+        document.body.appendChild(imgNode)
+        return {
+          setSrc: function (src) {
+            imgNode.src = src
+          },
+        }
+      })()
+
+      var proxyImage = (function () {
+        var img = new Image()
+        img.onload = function () {
+          myImage.setSrc(this.src)
+        }
+        return {
+          setSrc: function (src) {
+            myImage.setSrc("本地图片地址")
+            img.src = src
+          },
+        }
+      })()
+
+      proxyImage.setSrc("http://网络图片地址")
+    </script>
+  </body>
+</html>
