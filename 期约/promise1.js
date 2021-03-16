@@ -1,5 +1,10 @@
-let p = Promise.resolve()
+const p = new Promise((resolve, reject) => {
+  resolve("123")
+})
 
-p.then(() => console.log("onResolved handler"))
-
-console.log("then() returns" )
+p.then((res) => {
+  console.log(res)
+  return "gogogo"
+}).finally((res) => {
+  console.log(res)
+})
