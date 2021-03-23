@@ -36,9 +36,7 @@ let object = {
     }
   },
   getIdentityFunc7() {
-    console.log(this.identity)
     function innerFunction() {
-      console.log(this)
       console.log(this.identity)
     }
     innerFunction()

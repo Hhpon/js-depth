@@ -1,4 +1,4 @@
-var name = 'hhp'
+
 const test = {
   name: "Bill",
   show1: function () {
@@ -14,6 +14,7 @@ const test = {
     innerFunction()
   },
 }
+
 test.show1()
 test.show2()
 test.show3()
