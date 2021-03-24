@@ -9,14 +9,15 @@ function baseConverter(decNumber, base) {
     const num = decNumber % base
     remStack.push(num)
     decNumber = Math.floor(decNumber / base)
-    console.log(decNumber)
   }
 
   while (!remStack.isEmpty()) {
     result += number[remStack.pop()]
   }
 
-  console.log(result)
+  return result
 }
 
-baseConverter(100345, 16)
+console.log(baseConverter(100345, 2)) // 11000011111111001
+console.log(baseConverter(100345, 8)) // 303771
+console.log(baseConverter(100345, 16)) // 187F9
