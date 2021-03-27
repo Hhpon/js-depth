@@ -8,18 +8,20 @@ const p = new Promise((resolve, reject) => {
   }
 })
 
-const p1 = p.then(
-  (res) => {
-    console.log(res)
-    // return Promise.reject("等待之后成功啦")
-    return new Promise((resolve) => {
-      resolve("等待之后成功啦")
-    })
-  },
-  (err) => {
-    console.log(err)
-  }
-)
+// const p1 = p.then(
+//   (res) => {
+//     console.log(res)
+//     // return Promise.reject("等待之后成功啦")
+//     return new Promise((resolve) => {
+//       resolve("等待之后成功啦")
+//     })
+//   },
+//   (err) => {
+//     console.log(err)
+//   }
+// )
+
+const p1 = p.then()
 
 setTimeout(() => {
   console.log(p1)
