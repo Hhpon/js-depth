@@ -2,16 +2,11 @@ var dailyTemperatures = function (T) {
   var stack = []
   var ans = new Array(T.length).fill(0)
   T.forEach((num, index) => {
-    if (stack.length > 0) {
-      while (num > T[stack[stack.length - 1]]) {
-        ans[stack[stack.length - 1]] = index - stack[stack.length - 1]
-        stack.pop()
-      }
-      if (T[stack[stack.length - 1]] >= num) {
-        console.log(index)
-        stack.push(index)
-      }
-    } else {
+    while (stack.length > 0 && num > T[stack[stack.length - 1]]) {
+      ans[stack[stack.length - 1]] = index - stack[stack.length - 1]
+      stack.pop()
+    }
+    if (T[stack[stack.length - 1]] >= num || stack.length === 0) {
       stack.push(index)
     }
   })
