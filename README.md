@@ -6,8 +6,10 @@
 - ~~[this指向(文章内容)](!https://juejin.cn/post/6942827209015066660)~~
 - ~~Promise手写实现~~
 - ~~事件队列~~
-- ~~hash路由与history路由~~
-- ~~引用类型的深拷贝~~、
+- hash路由与history路由(了解单页面应用popchange与hashchange机制不同)
+- ~~引用类型的深拷贝~~
+- bind方法的实现
+- instanceof方法的实现
 - for循环相关的知识，比如for...in 与 for...of 的区别
 - 迭代器与生成器
 - 节流和防抖
