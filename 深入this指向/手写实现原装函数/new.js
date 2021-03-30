@@ -6,6 +6,19 @@
  *  4. 如果该函数没有返回对象，则返回this
  */
 
+function newOperator1(Ctor) {
+  if (typeof Ctor !== "function") {
+    throw new Error("newOperator function the first params must be a function")
+  }
+  const newObj = Object.create(Ctor.prototype)
+  const args = Array.prototype.slice(arguments, 1)
+  const result = Ctor.apply(newObj, args)
+  if (result === Object(result)) {
+    return result
+  }
+  return newObj
+}
+
 function newOperator(ctor) {
   if (typeof ctor !== "function") {
     throw "newOperator function the first param must be a function"

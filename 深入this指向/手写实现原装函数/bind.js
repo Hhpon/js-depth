@@ -7,36 +7,34 @@
  * 2. 构造函数调用，构造函数需要继承this
  */
 
-function selfBind(context) {
-  if (typeof this !== "function") {
-    throw "不是函数"
-  }
+const selfBind = require("./bind-shim")
 
-  const self = this
-  const args = Array.prototype.slice.call(arguments, 1)
+// function selfBind(context) {
+//   if (typeof this !== "function") {
+//     throw "不是函数"
+//   }
 
-  const bound = function () {
-    const finalArgs = Array.from(arguments).concat(args)
-    if (this instanceof bound) {
-      self.apply(this, finalArgs)
-    } else {
-      self.apply(context, finalArgs)
-    }
-  }
+//   const self = this
+//   const args = Array.prototype.slice.call(arguments, 1)
 
-  function Empty() {}
+//   const bound = function () {
+//     const finalArgs = Array.from(arguments).concat(args)
+//     return self.apply(this instanceof bound ? this : context, finalArgs)
+//   }
 
-  Empty.prototype = this.prototype
-  bound.prototype = new Empty()
+//   function Empty() {}
 
-  return bound
-}
+//   Empty.prototype = this.prototype
+//   bound.prototype = new Empty()
+
+//   return bound
+// }
 
 Function.prototype.selfBind = selfBind
 
 function andy(name) {
   this.name = name
-  console.log(this)
+  return "this"
 }
 
 andy.prototype.age = 50
@@ -54,7 +52,7 @@ const obj1 = andy.bind(obj)
 const obj2 = andy.selfBind(obj)
 
 console.log("=======================  obj1 Start  =====================")
-obj1("张学友")
+const obj1Ret = obj1("张学友")
 try {
   obj1.sayName()
 } catch (error) {
@@ -62,10 +60,11 @@ try {
 }
 console.log(obj1.length)
 console.log(obj1.name)
+console.log(obj1Ret)
 console.log("=======================  obj1 End  =======================")
 
 console.log("=======================  obj2 Start  =====================")
-obj2("张学友")
+const obj2Ret = obj2("张学友")
 try {
   obj2.sayName()
 } catch (error) {
@@ -73,14 +72,14 @@ try {
 }
 console.log(obj2.length)
 console.log(obj2.name)
-// obj2.prototype.age = 51
-// console.log(andy.prototype.age)
+console.log(obj2Ret)
 console.log("=======================  obj2 End  =======================")
 
 const person1 = new obj1("周华健")
 const person2 = new obj2("周华健")
 
 console.log("=======================  person1 Start  =====================")
+console.log(person1)
 try {
   person1.sayName()
 } catch (error) {
@@ -89,6 +88,7 @@ try {
 console.log("=======================  person1 End  =======================")
 
 console.log("=======================  person2 Start  =====================")
+console.log(person2)
 try {
   person2.sayName()
 } catch (error) {
@@ -97,3 +97,5 @@ try {
 person2.__proto__.age = 51
 console.log(andy.prototype.age)
 console.log("=======================  person2 End  =======================")
+
+const testAndy = new andy("测试Andy")
