@@ -38,7 +38,7 @@ class DoublyLinkedList extends LinkedList {
     }
     return false
   }
-  
+
   removeAt(index) {
     if (index >= 0 && index < this.count) {
       let current = this.head
@@ -65,18 +65,20 @@ class DoublyLinkedList extends LinkedList {
   }
 }
 
-const doublyLinkedList = new DoublyLinkedList()
-console.log(doublyLinkedList.toString())
-doublyLinkedList.insert("第一个元素", 0)
-console.log(doublyLinkedList.toString())
-doublyLinkedList.insert("最后一个元素", 1)
-console.log(doublyLinkedList.toString())
-doublyLinkedList.insert("在中间一个元素", 1)
-console.log(doublyLinkedList.toString())
-console.log(doublyLinkedList.removeAt(0))
-console.log(doublyLinkedList.toString())
-console.log(doublyLinkedList.removeAt(0))
-console.log(doublyLinkedList.toString())
-console.log(doublyLinkedList.removeAt(0))
-console.log(doublyLinkedList.toString())
-console.log(doublyLinkedList)
+module.exports = DoublyLinkedList
+
+// const doublyLinkedList = new DoublyLinkedList()
+// console.log(doublyLinkedList.toString())
+// doublyLinkedList.insert("第一个元素", 0)
+// console.log(doublyLinkedList.toString())
+// doublyLinkedList.insert("最后一个元素", 1)
+// console.log(doublyLinkedList.toString())
+// doublyLinkedList.insert("在中间一个元素", 1)
+// console.log(doublyLinkedList.toString())
+// console.log(doublyLinkedList.removeAt(0))
+// console.log(doublyLinkedList.toString())
+// console.log(doublyLinkedList.removeAt(0))
+// console.log(doublyLinkedList.toString())
+// console.log(doublyLinkedList.removeAt(0))
+// console.log(doublyLinkedList.toString())
+// console.log(doublyLinkedList)
