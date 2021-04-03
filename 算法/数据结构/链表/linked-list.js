@@ -50,6 +50,10 @@ class LinkedList {
     const index = this.indexOf(element)
     return this.removeAt(index)
   }
+  clear() {
+    this.count = 0
+    this.head = null
+  }
   indexOf(element) {
     let current = this.head
     for (let i = 0; i < this.count && current != null; i++) {
