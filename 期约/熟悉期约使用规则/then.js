@@ -21,13 +21,17 @@ const p = new Promise((resolve, reject) => {
 //   }
 // )
 
-const p1 = p.then()
+const p1 = p.then(() => {
+  console.log(p1);
+  return p1
+})
 
 setTimeout(() => {
   console.log(p1)
   p1.then(
     (result) => {
       console.log("promise状态是:成功 " + result)
+      console.log(result)
     },
     (err) => {
       console.log("promise状态是:失败 " + err)

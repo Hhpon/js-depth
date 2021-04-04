@@ -133,6 +133,7 @@ let a = {
   },
   goods: new Set(),
   symbol: Object(Symbol("symbol")),
+  testNull: null,
 }
 
 a.a = a
