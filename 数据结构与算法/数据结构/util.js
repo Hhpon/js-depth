@@ -22,4 +22,10 @@ function defaultCompare(a, b) {
   return a < b ? Compare.LESS_THAN : Compare.BIGGER_THAN
 }
 
-module.exports = { defaultEquals, Compare, defaultCompare, BalanceFactor }
+function swap(array, a, b) {
+  const temp = array[a]
+  array[a] = array[b]
+  array[b] = temp
+}
+
+module.exports = { defaultEquals, Compare, defaultCompare, BalanceFactor, swap }
