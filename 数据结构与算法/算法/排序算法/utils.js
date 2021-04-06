@@ -3,7 +3,7 @@ class Compare {
   static BIGGER_THAN = "BIGGER_THAN"
 }
 
-function compareFn(a, b) {
+function defaultCompare(a, b) {
   return a < b ? Compare.LESS_THAN : Compare.BIGGER_THAN
 }
 
@@ -11,4 +11,4 @@ function swap(array, a, b) {
   ;[array[a], array[b]] = [array[b], array[a]]
 }
 
-module.exports = { Compare, compareFn, swap }
+module.exports = { Compare, defaultCompare, swap }
