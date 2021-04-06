@@ -19,7 +19,7 @@ function quick(array, left, right, compareFn) {
 }
 
 function partition(array, left, right, compareFn) {
-  const pivot = array[Math.floor(array.length / 2)] // 主元
+  const pivot = array[Math.floor((left + right) / 2)] // 主元
   let i = left
   let j = right
   while (i <= j) {
