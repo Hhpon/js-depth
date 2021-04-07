@@ -11,4 +11,8 @@ function swap(array, a, b) {
   ;[array[a], array[b]] = [array[b], array[a]]
 }
 
-module.exports = { Compare, defaultCompare, swap }
+function defaultEquals(a, b) {
+  return a === b
+}
+
+module.exports = { Compare, defaultCompare, swap, defaultEquals }

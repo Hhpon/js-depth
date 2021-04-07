@@ -19,7 +19,7 @@ function quick(array, left, right, compareFn) {
 }
 
 function partition(array, left, right, compareFn) {
-  const pivot = array[Math.floor(array.length / 2)] // 主元
+  const pivot = array[Math.floor((left + right) / 2)] // 主元
   let i = left
   let j = right
   while (i <= j) {
@@ -38,6 +38,8 @@ function partition(array, left, right, compareFn) {
   return i
 }
 
-const array = [3, 5, 1, 6, 4, 7, 2]
+module.exports = quickSort
 
-console.log(quickSort(array))
+// const array = [3, 5, 1, 6, 4, 7, 2]
+
+// console.log(quickSort(array))
