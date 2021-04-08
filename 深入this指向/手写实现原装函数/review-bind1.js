@@ -17,12 +17,16 @@ function selfBind(context) {
 
   /**
    * 这样就解除了bound与self/this方法的耦合
+   *
+   * 我们在设置原型的时候还应该考虑一个问题，那就是箭头函数是没有原型的，所以我们在设置原型的时候应该加以校验，查看当前函数是否存在原型对象。
    */
   function Empty() {}
 
-  Empty.prototype = this.prototype
-  bound.prototype = new Empty()
-  Empty.prototype = null
+  if (this.prototype) {
+    Empty.prototype = this.prototype
+    bound.prototype = new Empty()
+    Empty.prototype = null
+  }
 
   return bound
 }
