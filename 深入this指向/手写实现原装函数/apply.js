@@ -16,7 +16,7 @@ function selfApply(context, args) {
   if (typeof this !== "function") {
     throw new TypeError(this + "is not a function")
   }
-  if (args == null) {
+  if (args == null || typeof args === "undefined") {
     args = []
   }
   if (args !== Object(args)) {
@@ -56,9 +56,19 @@ function getFunctionCode(argsLength) {
   return `arguments[0][arguments[1]](${args.join(",")})`
 }
 
+function selfCall(context) {
+  const args = Array.prototype.slice.call(arguments, 1)
+  return this.selfApply(context, args)
+}
+
 Function.prototype.selfApply = selfApply
+Function.prototype.selfCall = selfCall
+
+console.log("=================== apply ==================")
 
 var name = "刘德华"
+const name1 = "梁朝伟"
+let name2 = "刘嘉玲"
 
 function sayName(age) {
   this.age = age
@@ -74,5 +84,18 @@ sayName.apply(obj1, [20])
 sayName.apply("name: testString")
 
 sayName.selfApply(obj1, [20])
+sayName.selfApply("name: testString")
 
+console.log("=================== apply ==================")
+
+console.log("=================== call ==================")
+
+const obj2 = {
+  name: "周杰伦",
+}
+
+sayName(50)
+sayName.selfCall(obj2, 30, 90)
 // module.exports = selfApply
+
+console.log("=================== call ==================")

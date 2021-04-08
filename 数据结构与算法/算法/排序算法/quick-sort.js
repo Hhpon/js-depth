@@ -38,6 +38,8 @@ function partition(array, left, right, compareFn) {
   return i
 }
 
-const array = [3, 5, 1, 6, 4, 7, 2]
+module.exports = quickSort
 
-console.log(quickSort(array))
+// const array = [3, 5, 1, 6, 4, 7, 2]
+
+// console.log(quickSort(array))
