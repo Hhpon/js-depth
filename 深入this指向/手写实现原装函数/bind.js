@@ -7,28 +7,28 @@
  * 2. 构造函数调用，构造函数需要继承this
  */
 
-const selfBind = require("./bind-shim")
+// const selfBind = require("./bind-shim")
 
-// function selfBind(context) {
-//   if (typeof this !== "function") {
-//     throw "不是函数"
-//   }
+function selfBind(context) {
+  if (typeof this !== "function") {
+    throw "不是函数"
+  }
 
-//   const self = this
-//   const args = Array.prototype.slice.call(arguments, 1)
+  const self = this
+  const args = Array.prototype.slice.call(arguments, 1)
 
-//   const bound = function () {
-//     const finalArgs = Array.from(arguments).concat(args)
-//     return self.apply(this instanceof bound ? this : context, finalArgs)
-//   }
+  const bound = function () {
+    const finalArgs = Array.from(arguments).concat(args)
+    return self.apply(this instanceof bound ? this : context, finalArgs)
+  }
 
-//   function Empty() {}
+  function Empty() {}
 
-//   Empty.prototype = this.prototype
-//   bound.prototype = new Empty()
+  Empty.prototype = this.prototype
+  bound.prototype = new Empty()
 
-//   return bound
-// }
+  return bound
+}
 
 Function.prototype.selfBind = selfBind
 
