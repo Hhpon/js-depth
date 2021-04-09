@@ -5,10 +5,10 @@
  */
 function checkPrototype(left, right) {
   let result = false
-  let leftParent = left.__proto__
-  while (leftParent != null) {
+  let leftParent = Object.getPrototypeOf(left)
+  while (leftParent != null && result === false) {
     result = leftParent === right.prototype
-    leftParent = leftParent.prototype
+    leftParent = Object.getPrototypeOf(leftParent)
   }
   return result
 }
