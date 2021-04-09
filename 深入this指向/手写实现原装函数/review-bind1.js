@@ -1,3 +1,43 @@
+function selfBindShim(that) {
+  var target = this
+
+  if (typeof target !== "function") {
+    throw new Error("Function.prototype.bind called on incompatible" + target)
+  }
+
+  var args = Array.prototype.slice.call(arguments, 1)
+
+  var bound
+  var binder = function () {
+    if (this instanceof bound) {
+      var result = target.apply(this, args.concat(Array.prototype.slice.call(arguments)))
+      if (Object(result) === result) {
+        return result
+      }
+      return this
+    } else {
+      return target.apply(that, args.concat(Array.prototype.slice.call(arguments)))
+    }
+  }
+  var boundLength = Math.max(0, target.length - args.length)
+
+  var boundArgs = []
+  for (var i = 0; i < boundLength; i++) {
+    boundArgs.push("$" + i)
+  }
+
+  bound = Function("binder", "return function (" + boundArgs.join(",") + "){return binder.apply(this,arguments);}")(binder)
+  const Empty = function () {}
+
+  if (target.prototype) {
+    Empty.prototype = target.prototype
+    bound.prototype = new Empty()
+    Empty.prototype = null
+  }
+
+  return bound
+}
+
 function selfBind(context) {
   const self = this
   const args = Array.prototype.slice.call(arguments, 1)
@@ -36,23 +76,27 @@ function isObject(obj) {
 }
 
 Function.prototype.selfBind = selfBind
+Function.prototype.selfBindShim = selfBindShim
 
 Andy.prototype.name = "刘德华"
+Andy.prototype.sayName = function () {
+  console.log(this.name)
+}
 
 function Andy() {
+  console.log(this)
   return "123"
 }
 
-const andy = new Andy()
-
-console.log("andy", andy.name)
-
-const Andy1 = Andy.selfBind()
+const andy = Andy.bind()
+const Andy1 = Andy.bind()
+const Andy2 = Andy.selfBind()
+const Andy3 = Andy.selfBindShim()
 
 const andy1 = new Andy1()
-console.log("andy1", andy1.name)
 
-Andy1.prototype.name = "张学友"
-
-console.log("andy", andy.name)
-console.log("andy1", andy1.name)
+console.log(andy)
+console.log(Andy1)
+console.log(andy1.name)
+console.log(Andy2)
+console.log(Andy3)
