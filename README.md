@@ -5,20 +5,20 @@
 
 - [this指向(文章内容)](!https://juejin.cn/post/6942827209015066660)(闭包this内容)
 - ~~Promise手写实现~~
-- 实现Promise.all, Promise.allSettled
+- ~~实现Promise.all, Promise.allSettled~~
 - ~~事件队列~~
 - ~~hash路由与history路由(了解单页面应用popstate与hashchange机制不同)~~
 - ~~引用类型的深拷贝~~
 - ~~bind方法的实现~~
 - ~~apply、call方法的实现~~
-- instanceof方法的实现
+- ~~instanceof方法的实现~~
 - ~~for循环相关的知识，比如for...in 与 for...of 的区别~~
 - 迭代器与生成器
 - ~~节流和防抖~~
-- 闭包是什么，闭包有什么应用
+- ~~闭包是什么，闭包有什么应用~~
 - ~~bind、call、apply方法之间的区别~~
-- Js 事件(滑动穿透)
-- 垃圾回收
+- ~~Js 事件~~
+- ~~垃圾回收~~
 - 判断DOM标签的合法性，标签的闭合，span里面不能有div，写一个匹配DOM标签的正则
 - 获取一段DOM节点中标签个数最多的标签
 - 替换日期格式，xxxx-yy-zz 替换成 xxx-zz-yy

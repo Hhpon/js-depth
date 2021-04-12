@@ -5,8 +5,8 @@ function all(iterable) {
       if (iterable[i] instanceof Promise) {
         iterable[i]
           .then((res) => {
-            result.push(res)
-            if (i === iterable.length - 1) {
+            result[i] = res
+            if (result.length === iterable.length) {
               resolve(result)
             }
           })
@@ -15,7 +15,7 @@ function all(iterable) {
           })
       } else {
         result.push(iterable[i])
-        if (i === iterable.length - 1) {
+        if (result.length === iterable.length) {
           resolve(result)
         }
       }
