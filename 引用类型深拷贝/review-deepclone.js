@@ -82,6 +82,7 @@ let a = {
   },
   goods: new Set(["123", "456"]),
   symbol: Object(Symbol("symbol")),
+  und: undefined,
 }
 
 let b = deepClone(a)
