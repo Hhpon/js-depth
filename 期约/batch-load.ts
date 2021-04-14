@@ -2,6 +2,12 @@ function load(url) {
   return new Promise(() => {})
 }
 
+/**
+ *  在规定的范围内做一个批量的请求，最后把请求的结果按照数组的方式返回
+ * @param urls
+ * @param concurrent
+ * @returns
+ */
 function batchLoad(urls: string[], concurrent: number) {
   return new Promise(async (resolve, reject) => {
     const { length } = urls
