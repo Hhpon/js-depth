@@ -49,34 +49,39 @@ let object = {
   },
 }
 
-object.getIdentityFunc() // My Object
+object.getIdentityFunc()
 let getIdentityFunc = object.getIdentityFunc
-getIdentityFunc() // The Window
+getIdentityFunc()
 
-object.getIdentityFunc1() // The Window
+object.getIdentityFunc1()
 let getIdentityFunc1 = object.getIdentityFunc1
-getIdentityFunc1() // The Window
+getIdentityFunc1()
 
-object.getIdentityFunc2() // The Window
+object.getIdentityFunc2()
 let getIdentityFunc2 = object.getIdentityFunc2
-getIdentityFunc2() // The Window
+getIdentityFunc2()
 
-object.getIdentityFunc3()() // The Window
+object.getIdentityFunc3()()
 let getIdentityFunc3 = object.getIdentityFunc3()
-getIdentityFunc3() // The Window
+getIdentityFunc3()
 
-object.getIdentityFunc4()() // My Object
+object.getIdentityFunc4()()
 let getIdentityFunc4 = object.getIdentityFunc4()
-getIdentityFunc4() // My Object
+// getIdentityFunc4() 方法执行的时候this其实已经由上一步固定住了
+getIdentityFunc4()
 
-object.getIdentityFunc5()() // The Window
+object.getIdentityFunc5()()
 let getIdentityFunc5 = object.getIdentityFunc5()
-getIdentityFunc5() // The Window
+getIdentityFunc5()
 
-object.getIdentityFunc6()() // The Window
+object.getIdentityFunc6()()
 let getIdentityFunc6 = object.getIdentityFunc6()
-getIdentityFunc6() // The Window
+getIdentityFunc6()
 
 object.getIdentityFunc7()
+let getIdentityFunc7 = object.getIdentityFunc7
+getIdentityFunc7()
 
 object.getIdentityFunc8()
+let getIdentityFunc8 = object.getIdentityFunc8
+getIdentityFunc8()
