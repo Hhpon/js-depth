@@ -17,7 +17,7 @@ function selfApply(context, args) {
   }
   context = new Object(context)
   const fn = "__" + new Date().getTime()
-  const hasOriginalVal = Object.prototype.hasOwnProperty.call(context)
+  const hasOriginalVal = context.hasOwnProperty(fn)
   const originalVal = hasOriginalVal ? context[fn] : null
   context[fn] = this
   // 此处需要保证可以使用解构赋值
