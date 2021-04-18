@@ -1,9 +1,10 @@
 function SuperType() {
   this.property = true
+  this.colors = ["red"]
 }
 
 SuperType.prototype.getSuperValue = function () {
-  return this.property
+  return this.colors
 }
 
 function SubType() {
@@ -17,6 +18,8 @@ SubType.prototype.getSubValue = function () {
 }
 
 let instance = new SubType()
+instance.property = false
+instance.colors = ["green"]
 console.log(instance.getSuperValue())
-
-console.log(instance instanceof SubType)
+let instance1 = new SubType()
+console.log(instance1.getSuperValue())
