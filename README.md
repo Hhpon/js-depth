@@ -30,7 +30,7 @@
 
 #### http协议
 
-- http状态码
+- ~~http状态码~~
 - ~~浏览器缓存(强缓存、协商缓存)~~
 - 输入URL到渲染全过程
   - DNS 解析 (寻找IP地址的过程)
@@ -47,7 +47,7 @@
   - TCP 断开连接
 - 1.0与2.0之间主要有哪些变化
 - HTTP2， HTTP2的性能优化方面，真的优化很多么?
-- 简单请求和复杂请求
+- 前端跨域相关的字段有哪些
 - HTTPS的整个详细过程
 - [301和302的区别](!https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status)
 - 怎么用get实现post，就是使用get方法但是参数放到request body中
