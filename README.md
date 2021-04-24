@@ -87,3 +87,8 @@
 - [合并两个数组](!https://leetcode-cn.com/problems/merge-sorted-array/)
 - [打乱数组](!https://leetcode-cn.com/problems/shuffle-an-array/)
 - 数组区间
+
+#### 项目经验
+
+- 二向箔中遇到的难点是什么(高阶组件、组件封装的原则)
+- 组件封装的原则
