@@ -23,6 +23,7 @@
 - 获取一段DOM节点中标签个数最多的标签
 - 替换日期格式，xxxx-yy-zz 替换成 xxxx-zz-yy
 - ~~手写ES6的继承~~
+- requestAnimationFrame 是宏任务还是微任务
 
 #### 浏览器
 
