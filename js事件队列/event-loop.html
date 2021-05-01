@@ -152,22 +152,37 @@
       // promise().then((res) => console.log(res))
       // console.log("4")
 
-      let promise = () => {
-        return new Promise(function (resolve, reject) {
-          console.log("1")
-          setTimeout(() => {
-            console.log("6")
-            reject("5")
-            console.log("9")
-          })
-          console.log("8")
-        })
-      }
-      console.log("2")
-      promise()
-        .catch((err) => console.log(err))
-        .then((res) => console.log(res))
-      console.log("4")
+      // ===========第九题=============
+      // let promise = () => {
+      //   return new Promise(function (resolve, reject) {
+      //     console.log("1")
+      //     setTimeout(() => {
+      //       console.log("6")
+      //       reject("5")
+      //       console.log("9")
+      //     })
+      //     console.log("8")
+      //   })
+      // }
+      // console.log("2")
+      // promise()
+      //   .catch((err) => console.log(err))
+      //   .then((res) => console.log(res))
+      // console.log("4")
+
+      // ===========第十题=============
+      setTimeout(() => {
+        console.log(1)
+      })
+      requestAnimationFrame(() => {
+        console.log(2)
+      })
+      setTimeout(() => {
+        console.log(4)
+      })
+      Promise.resolve(3).then((res) => {
+        console.log(res)
+      })
     </script>
   </body>
 </html>
