@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    组合式继承<br />
+    基本上综合了原型链式继承的共享方法的优势，又融合了盗用构造函数式继承的原型值属性共享
+    <script>
+      function SuperType() {
+        this.superProperty = true
+      }
+
+      SuperType.prototype.saySuperProperty = function () {
+        console.log(this.superProperty)
+      }
+
+      function SubType() {
+        this.subProperty = false
+        SuperType.call(this)
+      }
+
+      SubType.prototype = new SuperType()
+      SubType.prototype.constructor = SubType
+    </script>
+  </body>
+</html>

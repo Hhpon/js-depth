@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    原型链式继承方式<br>
+    缺点：继承之后的构造函数的实例会共享父级元素的引用属性。无法给父级构造函数传递参数<br>
+    原因：该继承方式是把子级构造函数的原型对象设置成父级构造函数的实例，也就是说子级构造函数的原型对象是父级构造函数的实例(一个具体的个体),所以当子类实例访问原型属性的时候其实访问的是这个实例的属性，所以引用值会出现共享的问题。
+    <script>
+      function SuperType() {
+        this.superProperty = true
+      }
+
+      SuperType.prototype.saySuperProperty = function () {
+        console.log(this.superProperty)
+      }
+
+      function SubType() {
+        this.subProperty = false
+      }
+
+      SubType.prototype = new SuperType()
+
+      const subType = new SubType()
+
+      subType.saySuperProperty()
+    </script>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    盗用构造函数式继承<br />
+    缺点：虽然解决了引用值共享的问题，但是方法无法共享，无法访问父级构造函数的原型方法。<br />
+    <script>
+      function SuperType() {
+        this.superProperty = true
+        this.colors = ["red", "green"]
+      }
+
+      SuperType.prototype.saySuperProperty = function () {
+        console.log(this.superProperty)
+      }
+
+      function SubType() {
+        this.subProperty = false
+        SuperType.call(this)
+      }
+
+      const subType1 = new SubType()
+      const subType2 = new SubType()
+
+      subType1.colors.push("black")
+      console.log(subType1.colors)
+      console.log(subType2.colors)
+    </script>
+  </body>
+</html>
