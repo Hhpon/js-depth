@@ -1,3 +1,6 @@
+/**
+ * 模拟块级作用域
+ */
 for (var i = 0; i < 5; i++) {
   ;(function (x) {
     setTimeout(() => {
