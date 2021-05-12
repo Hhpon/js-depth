@@ -19,13 +19,8 @@ function getCountMax(nums, k) {
   numLists.sort((prev, cur) => {
     return cur[1] - prev[1]
   })
-
-  const result = []
-  for (let j = 0; j < k; j++) {
-    result.push(numLists[j][0])
-  }
-
-  return result
+  
+  return numLists.map((num) => num[0]).slice(0, k)
 }
 
 console.log(getCountMax(nums, k))

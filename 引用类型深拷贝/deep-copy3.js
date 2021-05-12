@@ -10,8 +10,8 @@ const boolTag = "[object Boolean]"
 const dateTag = "[object Date]"
 const errorTag = "[object Error]"
 const numberTag = "[object Number]"
-const regexpTag = "[object RegExp]"
 const stringTag = "[object String]"
+const regexpTag = "[object RegExp]"
 const symbolTag = "[object Symbol]"
 
 const deepTag = [mapTag, setTag, arrayTag, objectTag]
