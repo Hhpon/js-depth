@@ -24,6 +24,9 @@
 - 替换日期格式，xxxx-yy-zz 替换成 xxxx-zz-yy
 - ~~手写ES6的继承~~
 - requestAnimationFrame 是宏任务还是微任务
+- 实现promise A+规范可以知道promise.resolve是通过settimeout实现的异步，但是为什么settimeout是宏任务，而promise是微任务呢？
+- promise 的实例方法
+- promise.all 的方法中所有的promise是并发执行的吗
 
 #### 浏览器
 
@@ -62,6 +65,9 @@
 - ~~Vue-Router~~
 - diff 算法
 - Vue 自定义指令懒加载
+- Vuex 原理
+- vue 父子组件之间传值 
+- event bus
 
 #### Angular 原理
 
@@ -93,3 +99,7 @@
 
 - 二向箔中遇到的难点是什么(高阶组件、组件封装的原则)
 - 组件封装的原则
+
+#### 前端工程化
+
+- webpack
