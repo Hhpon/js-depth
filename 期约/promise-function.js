@@ -14,7 +14,7 @@ function all(iterable) {
             reject(err)
           })
       } else {
-        result.push(iterable[i])
+        result[i] = iterable[i]
         if (result.length === iterable.length) {
           resolve(result)
         }
