@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue源码学习</title>
+  </head>
+  <body>
+    <div id="app">
+      <h2>{{person.name}}--{{person.age}}</h2>
+      <h3>{{person.interests}}</h3>
+      <ul>
+        <il>1</il>
+        <il>2</il>
+        <il>3</il>
+        <il>4</il>
+      </ul>
+      <h3>{{memo.title}}</h3>
+      <div v-text="memo.content"></div>
+      <input type="text" v-model="memo.title" />
+      <input type="text" v-model="memo.content" />
+      <div v-html="htmlStr"></div>
+      <button v-on:click="submitClick">提交</button>
+      <button @click="cancleClick">取消</button>
+    </div>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script>
+    const vm = new Vue({
+      el: "#app",
+      data: {
+        person: {
+          name: "张三",
+          age: 18,
+          interests: ["写代码", "踢球", "打游戏"],
+        },
+        memo: {
+          title: "标题",
+          content: "哈哈哈哈哈哈哈",
+        },
+        htmlStr: "<button>点我</button>",
+        test: "",
+      },
+      methods: {
+        submitClick: function (event) {
+          console.log(this)
+          console.log("提交按钮点击", event)
+          console.log((this.test = undefined))
+        },
+        cancleClick: function (event) {
+          console.log(this)
+          console.log("取消按钮点击")
+        },
+      },
+    })
+  </script>
+</html>
