@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let initial = ["foo"]
+
+      let array = ["bar"]
+
+      let obj = { name: "andy" }
+
+      console.log(!!array[Symbol.isConcatSpreadable])
+      console.log(initial.concat(array))
+      array[Symbol.isConcatSpreadable] = false
+      console.log(!!array[Symbol.isConcatSpreadable])
+      console.log(initial.concat(array))
+      console.log(obj[Symbol.isConcatSpreadable])
+      console.log(initial.concat(obj))
+    </script>
+  </body>
+</html>

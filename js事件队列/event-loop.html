@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // ============第一题============
+      // async function async1() {
+      //   console.log("async1 start")
+      //   await async2()
+      //   console.log("async1 end")
+      // }
+      // async function async2() {
+      //   console.log("async2")
+      // }
+      // console.log("script start")
+      // setTimeout(function () {
+      //   console.log("setTimeout")
+      // }, 0)
+      // async1()
+      // new Promise(function (resolve) {
+      //   console.log("promise1")
+      //   resolve()
+      // }).then(function () {
+      //   console.log("promise2")
+      // })
+      // console.log("script end")
+
+      // ============第二题=============
+      // console.log("start")
+      // setTimeout(() => {
+      //   console.log("children2")
+      //   Promise.resolve().then(() => {
+      //     console.log("children3")
+      //   })
+      // }, 0)
+
+      // new Promise(function (resolve, reject) {
+      //   console.log("children4")
+      //   setTimeout(function () {
+      //     console.log("children5")
+      //     resolve("children6")
+      //   }, 0)
+      // }).then((res) => {
+      //   console.log("children7")
+      //   setTimeout(() => {
+      //     console.log(res)
+      //   }, 0)
+      // })
+
+      // ============第三题=============
+      // const p = function () {
+      //   return new Promise((resolve, reject) => {
+      //     const p1 = new Promise((resolve, reject) => {
+      //       setTimeout(() => {
+      //         resolve(1)
+      //       }, 0)
+      //       resolve(2)
+      //     })
+      //     p1.then((res) => {
+      //       console.log(res)
+      //     })
+      //     console.log(3)
+      //     resolve(4)
+      //   })
+      // }
+
+      // p().then((res) => {
+      //   console.log(res)
+      // })
+      // console.log("end")
+
+      // ============第四题=============
+      // const p = function () {
+      //   return new Promise((resolve, reject) => {
+      //     const p1 = new Promise((resolve, reject) => {
+      //       setTimeout(() => {
+      //         resolve(1)
+      //       }, 0)
+      //     })
+      //     p1.then((res) => {
+      //       console.log(res)
+      //     })
+      //     console.log(3)
+      //     resolve(4)
+      //   })
+      // }
+
+      // p().then((res) => {
+      //   console.log(res)
+      // })
+      // console.log("end")
+
+      // ============第五题============
+
+      // let promise = new Promise(function (resolve, reject) {
+      //   console.log("1")
+      //   resolve()
+      // })
+      // console.log("2")
+      // promise.then(() => console.log("3"))
+      // console.log("4")
+
+      // ===========第六题=============
+
+      // let promise = () => {
+      //   return new Promise(function (resolve, reject) {
+      //     console.log("1")
+      //     resolve()
+      //   })
+      // }
+      // console.log("2")
+      // promise().then(() => console.log("3"))
+      // console.log("4")
+
+      // ===========第七题=============
+
+      // let promise = () => {
+      //   return new Promise(function (resolve, reject) {
+      //     console.log("1")
+      //     setTimeout(() => {
+      //       console.log("6")
+      //       resolve("5")
+      //       console.log('9');
+      //     })
+      //     resolve("7")
+      //     console.log("8")
+      //   })
+      // }
+      // console.log("2")
+      // promise().then((res) => console.log(res))
+      // console.log("4")
+
+      // ===========第八题=============
+
+      // let promise = () => {
+      //   return new Promise(function (resolve, reject) {
+      //     console.log("1")
+      //     setTimeout(() => {
+      //       console.log("6")
+      //       resolve("5")
+      //       console.log("9")
+      //     })
+      //     console.log("8")
+      //   })
+      // }
+      // console.log("2")
+      // promise().then((res) => console.log(res))
+      // console.log("4")
+
+      // ===========第九题=============
+      // let promise = () => {
+      //   return new Promise(function (resolve, reject) {
+      //     console.log("1")
+      //     setTimeout(() => {
+      //       console.log("6")
+      //       reject("5")
+      //       console.log("9")
+      //     })
+      //     console.log("8")
+      //   })
+      // }
+      // console.log("2")
+      // promise()
+      //   .catch((err) => console.log(err))
+      //   .then((res) => console.log(res))
+      // console.log("4")
+
+      // ===========第十题=============
+      setTimeout(() => {
+        console.log(1)
+      })
+      requestAnimationFrame(() => {
+        console.log(2)
+      })
+      setTimeout(() => {
+        console.log(4)
+      })
+      Promise.resolve(3).then((res) => {
+        console.log(res)
+      })
+    </script>
+  </body>
+</html>

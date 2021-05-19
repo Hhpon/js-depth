@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="name" />
+    <script>
+      function debounce(deply, fn) {
+        let timer = null
+        return function () {
+          if (timer) {
+            clearTimeout(timer)
+          }
+          console.log(this)
+          const that = this
+          const args = arguments
+          timer = setTimeout(function () {
+            /**
+             *
+             * 此处使用apply的原因我们可以从使不使用debounce函数的情况来考虑
+             * 直接使用changeInput函数的时候，函数内的this指向是input
+             * 如果我们在此处直接fn()如此调用该方法，fn方法中的this指向window(非严格模式)
+             * 所以我们要如何使fn内的this指向input呢？
+             * 第一步改变fn内的this指向我们可以使用apply,call方法
+             * 第二步需要传递该函数调用时候的参数arguments
+             *
+             * 新问题，我们绑定的this这个时候指向谁呢？
+             * this指向 => 其实就是settimeout第一个参数中的this指向，如果settimeout第一个参数是一个箭头函数，那么问题就很简单了其实。
+             * 箭头函数的this指向定义该箭头函数的上下文，所以我们就不必像现在一样设置一个that中间变量；
+             * 箭头函数没有arguments属性，所以在箭头函数中直接使用arguments就是定义该箭头函数的上下文的arguments，所以我们也不需要像现在一样声明一个args中间变量。
+             */
+            fn.apply(that, args)
+            clearTimeout(timer)
+            timer = null
+          }, deply)
+        }
+      }
+
+      function changeInput(event) {
+        console.log(this)
+        console.log(event.target.value)
+      }
+
+      document.querySelector("#name").addEventListener("input", debounce(1000, changeInput))
+      // document.querySelector("#name").addEventListener("input", changeInput)
+    </script>
+  </body>
+</html>

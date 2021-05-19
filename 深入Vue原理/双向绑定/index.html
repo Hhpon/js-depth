@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="input" /><br />
+    <span id="p"></span>
+    <script>
+      class Vue {
+        constructor(options = {}) {
+          this.$options = options
+          let data = (this._data = this.$options.data)
+          Object.keys(data).forEach((key) => this._proxy(key))
+          observe(data)
+          console.log(data)
+        }
+
+        $watch(expOrFn, cb) {
+          new Watcher(this, expOrFn, cb)
+        }
+        // 为当前的vue的data对象增加代理功能
+        _proxy(key) {
+          Object.defineProperty(this, key, {
+            configurable: true,
+            enumerable: true,
+            get() {
+              this._data[key]
+            },
+            set(val) {
+              this._data[key] = val
+            },
+          })
+        }
+      }
+
+      /**
+       *
+       */
+
+      class Observer {
+        constructor(value) {
+          this.value = value
+          this.walk(value)
+        }
+
+        walk(value) {
+          Object.keys(value).forEach((key) => this.convert(key, value[key]))
+        }
+        // 执行监听的具体方法
+        convert(key, val) {
+          defineReactive(this.value, key, val)
+        }
+      }
+
+      /**
+       * 如果传入的数据类型是对象，那么会为这个对象的每个属性增加get、set方法
+       * @param {*} value
+       * @returns
+       */
+      function observe(value) {
+        if (!value || typeof value !== "object") {
+          return
+        }
+        return new Observer(value)
+      }
+
+      /**
+       * 为传入的obj的对应key属性增加get、set方法
+       * 如果该数据的数据类型是对象，那么会调用observe方法深度遍历data对象
+       * @param {*} obj
+       * @param {*} key
+       */
+      function defineReactive(obj, key, val) {
+        const dep = new Dep()
+        let childObj = observe(obj[key])
+        Object.defineProperty(obj, key, {
+          enumerable: true,
+          configurable: true,
+          get() {
+            if (Dep.target) {
+              dep.depend()
+            }
+            return val
+          },
+          set(newVal) {
+            if (val === newVal) {
+              return
+            }
+            val = newVal
+            // 如果传入的newVal类型是object，那么也需要为这个数据增加set、get方法
+            childObj = observe(newVal)
+            dep.notify()
+          },
+        })
+      }
+
+      let uid = 0
+
+      // 用于存储订阅者并发布消息  消息中心
+      class Dep {
+        constructor() {
+          this.id = uid++
+          this.subs = []
+        }
+
+        depend() {
+          console.log(Dep.target)
+          if (Dep.target) {
+            Dep.target.addDep(this)
+          }
+        }
+
+        addSub(sub) {
+          this.subs.push(sub)
+        }
+
+        notify() {
+          this.subs.forEach((sub) => sub.update())
+        }
+      }
+
+      Dep.target = null
+
+      class Watcher {
+        constructor(vm, expOrFn, cb) {
+          this.depIds = {}
+          this.vm = vm
+          this.cb = cb
+          this.expOrFn = expOrFn
+          this.val = this.get()
+        }
+
+        update() {
+          this.run()
+        }
+        addDep(dep) {
+          if (!this.depIds.hasOwnProperty(dep.id)) {
+            dep.addSub(this)
+            this.depIds[dep.id] = dep
+          }
+        }
+        run() {
+          const val = this.get()
+          console.log(val)
+          // 校验数据是否发生了变化，不变则不动 
+          if (val !== this.val) {
+            this.val = val
+            this.cb.call(this.vm, val)
+          }
+        }
+        get() {
+          Dep.target = this
+          const val = this.vm._data[this.expOrFn]
+
+          Dep.target = null
+          return val
+        }
+      }
+
+      let demo = new Vue({
+        data: {
+          text: "",
+        },
+      })
+
+      const p = document.getElementById("p")
+      const input = document.getElementById("input")
+
+      input.addEventListener("keyup", function (e) {
+        demo.text = e.target.value
+      })
+
+      demo.$watch("text", (str) => (p.innerHTML = str))
+    </script>
+  </body>
+</html>

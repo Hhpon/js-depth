@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>寄生式组合继承</title>
+  </head>
+  <body>
+    <script>
+      function SuperType() {
+        this.superTypeProperty = true
+        this.colors = ["red", "green"]
+      }
+      SuperType.prototype.getSuperTypeProperty = function () {
+        console.log(this.superTypeProperty)
+      }
+      function SubType() {
+        SuperType.call(this)
+      }
+      // SubType.prototype = new SuperType()
+      function createOperator(SubType, SuperType) {
+        SubType.prototype = Object.create(SuperType.prototype)
+        SubType.prototype.constructor = SubType
+      }
+
+      createOperator(SubType, SuperType)
+
+      const subType1 = new SubType()
+      const subType2 = new SubType()
+
+      subType1.getSuperTypeProperty()
+
+      subType1.colors.push("black")
+      console.log(subType1.colors)
+      console.log(subType2.colors)
+    </script>
+  </body>
+</html>

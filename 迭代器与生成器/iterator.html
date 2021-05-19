@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let arr = [1, 2, 3, 4, 5]
+      let iter1 = arr[Symbol.iterator]()
+
+      // console.log(iter1)
+      for (const el of iter1) {
+        console.log(el)
+        // console.log(el.next())
+      }
+
+      class Foo {
+        [Symbol.iterator]() {
+          return this
+        }
+
+        next() {
+          return { done: false, value: "foo" }
+        }
+      }
+
+      let f = new Foo()
+
+      const iter2 = f[Symbol.iterator]()
+
+      console.log(iter1.next())
+
+      // 这个迭代器由于没有尽头，会导致死循环
+      // for (const el of f) {
+      //   console.log(el);
+      // }
+
+      let a = new Array(1, 2, 3, 4, 5)
+
+      console.log(a[Symbol.iterator]().next())
+
+      for (const el of a[Symbol.iterator]()) {
+        console.log(el)
+      }
+
+      class Counter {
+        constructor(limit) {
+          this.limit = limit
+        }
+
+        next() {
+          if (this.count <= this.limit) {
+            return { done: false, value: this.count++ }
+          } else {
+            return { done: true, value: undefined }
+          }
+        }
+
+        [Symbol.iterator]() {
+          this.count = 1
+          return this
+        }
+      }
+
+      const counter = new Counter(3)
+
+      for (const i of counter) {
+        console.log(i)
+      }
+
+      for (const i of counter) {
+        console.log(i)
+      }
+    </script>
+  </body>
+</html>

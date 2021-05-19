@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let person = {
+        name: "Matt",
+        age: 27,
+      }
+      function printPerson(foo, { name, age }, bar) {
+        console.log(arguments)
+        console.log(name, age)
+      }
+      function printPerson2(foo, { name: personName, age: personAge }, bar) {
+        console.log(arguments)
+        console.log(personName, personAge)
+      }
+      printPerson("1st", person, "2nd")
+      printPerson2("1st", person, "2nd")
+    </script>
+  </body>
+</html>
