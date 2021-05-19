@@ -110,6 +110,7 @@ const observe = (value) => {
 class Vue {
   data: any
   constructor(option: { data: any }) {
+    // Vue 初始化过程中会把传入的data数据设置响应式功能
     this.data = option.data
     Object.keys(this.data).forEach((key) => this.proxy(key))
     observe(this.data)
