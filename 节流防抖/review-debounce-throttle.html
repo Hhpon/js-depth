@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>防抖函数: 一段时间以后再执行 input时间搜索，debounce节约带宽</div>
+    <div>节流函数: 一段时间内不执行 控制事件执行频率，如touchmove</div>
+    <input type="text" id="input" />
+    <div style="height: 10000px; background-color: blue"></div>
+    <script>
+      function debounce(fn, deply) {
+        let timer
+        return function () {
+          if (timer) {
+            clearTimeout(timer)
+          }
+          timer = setTimeout(() => {
+            fn.apply(this, arguments)
+          }, deply)
+        }
+      }
+      function throttle(fn, deply) {
+        let timer
+        return function () {
+          if (timer) {
+            return
+          }
+          timer = setTimeout(() => {
+            fn.apply(this, arguments)
+            clearTimeout(timer)
+            timer = null
+          }, deply)
+        }
+      }
+      const input = document.querySelector("#input")
+      input.addEventListener(
+        "input",
+        debounce((e) => {
+          console.log(e.target.value)
+        }, 200)
+      )
+      window.addEventListener(
+        "scroll",
+        throttle(() => {
+          console.log("scroll")
+        }, 500)
+      )
+    </script>
+  </body>
+</html>
