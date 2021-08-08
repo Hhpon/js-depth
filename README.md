@@ -1,3 +1,14 @@
+### 2021年8月面试学习计划
+---
+
+#### Javascript 基础知识
+
+- [this指向(文章内容)](!https://juejin.cn/post/6942827209015066660)(闭包this内容)
+- 实现Promise.all、Promise.allSettled、Promise.any、Promise.race
+- 引用类型的深拷贝
+- bind、apply、call、instanceof方法的实现
+- 节流和防抖
+
 ### 2021年3月面试学习计划
 ---
 
