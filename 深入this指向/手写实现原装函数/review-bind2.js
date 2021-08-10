@@ -16,9 +16,9 @@ function getGlobalObject() {
 
 function selfBind(target) {
   if (typeof this !== "function") {
-    throw new TypeError("must be function")
+    throw new TypeError("Function.prototype.bind called on incompatible" + target)
   }
-  if (target === undefined) {
+  if (typeof target === 'undefined') {
     target = getGlobalObject()
   }
   if (!isObject(target)) {
@@ -46,7 +46,7 @@ function selfBind(target) {
   bound = Function("binder", "return function(" + boundArgs.join(",") + "){ return binder.apply(this,arguments) }")(binder)
 
   if (self.prototype) {
-    function Empty() {}
+    function Empty() { }
     Empty.prototype = self.prototype
     bound.prototype = new Empty()
     Empty = null
