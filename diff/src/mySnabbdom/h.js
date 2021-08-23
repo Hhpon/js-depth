@@ -12,7 +12,6 @@ export function h(sel, b, c) {
   if (Array.isArray(c)) {
     children = c
     for (let i = 0; i < children.length; i++) {
-      console.log(typeof children[i])
       if (typeof children[i] !== 'object' && typeof children[i] !== 'function') {
         children[i] = vNode(undefined, undefined, undefined, children[i], undefined)
       }
