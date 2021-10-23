@@ -48,6 +48,11 @@ function deepClone(obj) {
     }
     return result
   }
+
+  /**
+   * map也无法使用for...in的方式来迭代
+   * 可以使用for...of
+   */
   if (type === mapType) {
     const result = new Map()
     for (const key in obj) {
@@ -57,6 +62,11 @@ function deepClone(obj) {
     }
     return result
   }
+
+  /**
+   * set 不存在get方法
+   * 迭代set的方式是for of
+   */
   if (type === setType) {
     const result = new Set()
     for (const key in obj) {
