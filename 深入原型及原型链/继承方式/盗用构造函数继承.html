@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /**
+       * 盗用构造函数的方法实际是假的继承，只是后期实现终极继承方式的一个垫脚石
+       * 因为这种方法无法访问原型
+       * 不同于原型链继承；原型链继承中的原型使用的是同一个实例对象，所以继承之后共享了这个对象
+       * 盗用构造函数的原理其实很简单，每次实例化的时候都重新实例化了一下原来的构造函数
+       * **/
+
+      function SuperType() {
+        this.initProto = true
+        this.proto = {
+          age: 100,
+        }
+      }
+      SuperType.prototype.getSuperValue = function () {
+        console.log(this.initProto)
+      }
+
+      function SubType() {
+        return SuperType.apply(this, arguments)
+      }
+
+      const obj1 = new SubType()
+      const obj2 = new SubType()
+      console.log(obj1)
+      obj1.proto.age = 90
+      console.log(obj2)
+      obj1.getSuperValue()
+    </script>
+  </body>
+</html>

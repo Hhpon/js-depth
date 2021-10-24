@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /**
+       * 寄生式组合继承优化了组合继承当中调用SuperType的问题
+       * 使用了一个寄生式的函数，利用了原型式继承方法减少了一次superType的调用
+       * **/
+
+      function SuperType() {
+        this.initValue = true
+        this.proto = {
+          age: 100,
+        }
+      }
+
+      SuperType.prototype.getInitValue = function () {
+        console.log(this.initValue)
+      }
+
+      function SubType() {
+        SuperType.apply(this, arguments)
+      }
+
+      function inheritPrototype(SuperType, SubType) {
+        SubType.prototype = Object.create(SuperType.prototype)
+        SubType.prototype.constructor = SubType
+      }
+
+      inheritPrototype(SuperType, SubType)
+
+      const obj1 = new SubType()
+      const obj2 = new SubType()
+      obj1.proto.age = 90
+      console.log(obj1)
+      console.log(obj2)
+      obj1.getInitValue()
+      obj2.getInitValue()
+    </script>
+  </body>
+</html>

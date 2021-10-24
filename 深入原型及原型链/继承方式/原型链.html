@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    原型链继承的缺陷: 继承的引用类型是共享的
+    <script>
+      fun1.prototype.features = {
+        age: 100,
+        height: 170,
+      }
+
+      function fun1() {
+        this.name = "fun1"
+        this.sing = function () {
+          console.log("balabala")
+        }
+      }
+
+      const obj1 = new fun1()
+      obj1.sing()
+      console.log(obj1.features)
+
+      function fun2() {
+        this.age = 20
+      }
+
+      /**
+       * fun1的实例被赋值给fun2的原型
+       * 这样fun1能访问到的原型，fun2也能访问到了
+       * 由此实现了继承
+       */
+      fun2.prototype = new fun1()
+      const obj2 = new fun2()
+      obj2.sing()
+      console.log(obj2.features)
+
+      const obj3 = new fun2()
+      obj3.features.age = 99
+
+      console.log(obj2.features)
+    </script>
+  </body>
+</html>

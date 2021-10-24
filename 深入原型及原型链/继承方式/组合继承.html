@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /**
+       * 组合继承实际上是组合了原型链、盗用构造函数两种方式；是一种比较完美的继承方式
+       *
+       * 但是作为需要优化到极致的目标来说，其实还有优化的空间，实际上在这种方法当中superType被调用了两次
+       *
+       * **/
+
+      function SuperType() {
+        this.initValue = true
+        this.proto = {
+          age: 100,
+        }
+      }
+
+      SuperType.prototype.getInitValue = function () {
+        console.log(this.initValue)
+      }
+
+      function SubType() {
+        SuperType.apply(this)
+      }
+
+      SubType.prototype = new SuperType()
+
+      const obj1 = new SubType()
+      const obj2 = new SubType()
+      console.log(obj1)
+      obj1.proto.age = 90
+      console.log(obj2)
+    </script>
+  </body>
+</html>
