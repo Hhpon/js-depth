@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    防抖为什么需要用闭包呢？ 为了保存timer这个变量，如果这个变量可以通过全局变量保存就可以不用闭包
+    而且要想保存住这个闭包的变量，保存这个变量的函数理论上只能执行一次，之后每次执行的方法应该是返回的闭包
+    <input id="input" type="text" oninput="inputChange(event)" />
+    <script>
+      function debounce(fn, deply) {
+        let timer
+        return function () {
+          if (timer != undefined) {
+            clearTimeout(timer)
+          }
+          timer = setTimeout(() => {
+            fn.apply(this, arguments)
+            clearTimeout(timer)
+            timer = undefined
+          }, deply)
+        }
+      }
+
+      function onInput(e) {
+        console.log(e.target.value)
+      }
+
+      const inputChange = debounce(onInput, 1000)
+
+      // document.querySelector("#input").addEventListener("input", debounce(onInput, 1000))
+    </script>
+  </body>
+</html>

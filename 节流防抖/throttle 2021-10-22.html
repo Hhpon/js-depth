@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input id="input" type="text" oninput="inputChange(event)" />
+    <script>
+      function throttle(fn, deply) {
+        let timer
+        return function () {
+          if (timer != undefined) {
+            return
+          }
+          timer = setTimeout(() => {
+            fn.apply(fn, arguments)
+            clearTimeout(timer)
+            timer = undefined
+          }, deply)
+        }
+      }
+
+      function onInput(e) {
+        console.log(e.target.value)
+      }
+
+      const inputChange = throttle(onInput, 1000)
+    </script>
+  </body>
+</html>
