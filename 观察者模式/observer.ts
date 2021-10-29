@@ -1,26 +1,20 @@
 class Observer {
+  constructor() {}
+
   update() {
-    //  do something
-    console.log("收到通知")
+    console.log("update")
   }
 }
 
 class Subject {
-  observerLists: Observer[] = []
-
-  publish() {
-    this.observerLists.forEach((observer) => {
-      observer.update()
-    })
+  observerList: Observer[]
+  constructor() {
+    this.observerList = []
   }
-  trigger(observer: Observer) {
-    this.observerLists.push(observer)
+  triger(observer) {
+    this.observerList.push(observer)
+  }
+  publish() {
+    this.observerList.forEach((observer) => observer.update())
   }
 }
-
-const observer = new Observer()
-const subject = new Subject()
-
-subject.trigger(observer)
-
-subject.publish()  //收到通知
