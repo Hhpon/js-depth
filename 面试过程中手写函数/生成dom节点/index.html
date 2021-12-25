@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // {
+      //   tag: 'DIV',
+      //   attrs:{
+      //            id:'app'
+      //   },
+      //   children: [
+      //     {
+      //       tag: 'SPAN',
+      //       children: [
+      //         { tag: 'A', children: [] }
+      //       ]
+      //     },
+      //     {
+      //       tag: 'SPAN',
+      //       children: [
+      //         { tag: 'A', children: [] },
+      //         { tag: 'A', children: [] }
+      //       ]
+      //     }
+      //   ]
+      // }
+
+      /**
+       * render(vnode) vnode可能是一个文本字符，但是不一定是文字，可能是数字，所以需要先转换成数字
+       * **/
+      function render(vnode) {
+        if (typeof vnode === "number" || typeof vnode === "string") {
+          return document.createTextNode(vnode)
+        }
+        const dom = document.createElement(vnode.tag)
+        if (vnode.attrs) {
+          for (let key in vnode.attrs) {
+            dom.setAttribute(key, vnode.attrs[key])
+          }
+        }
+        vnode.children.forEach((child) => {
+          dom.appendChild(render(child))
+        })
+        return dom
+      }
+    </script>
+  </body>
+</html>
