@@ -1,67 +1,81 @@
 <mxfile host="65bd71144e">
     <diagram id="NWt1ZGQqgqMdKastc531" name="第 1 页">
-        <mxGraphModel dx="990" dy="1445" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="825" dy="1338" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
-                <mxCell id="7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="5" target="6">
+                <mxCell id="28" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="5" target="27">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="5" value="&#10;&#10;&lt;span style=&quot;color: rgb(240, 240, 240); font-family: helvetica; font-size: 12px; font-style: normal; font-weight: 400; letter-spacing: normal; text-align: center; text-indent: 0px; text-transform: none; word-spacing: 0px; background-color: rgb(42, 42, 42); display: inline; float: none;&quot;&gt;sel相同、key相同的新旧节点该如何做diff&lt;/span&gt;&#10;&#10;" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
-                    <mxGeometry x="360" y="-570" width="140" height="50" as="geometry"/>
+                <mxCell id="5" value="&#10;&#10;&lt;span style=&quot;color: rgb(240, 240, 240); font-family: helvetica; font-size: 12px; font-style: normal; font-weight: 400; letter-spacing: normal; text-align: center; text-indent: 0px; text-transform: none; word-spacing: 0px; background-color: rgb(42, 42, 42); display: inline; float: none;&quot;&gt;sel相同、key相同的新旧节点该如何做diff&lt;/span&gt;&#10;&#10;" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="360" y="-650" width="140" height="50" as="geometry"/>
                 </mxCell>
-                <mxCell id="9" value="True" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="6" target="8">
+                <mxCell id="9" value="True" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="6" target="8" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="15" value="False/新节点没有文本节点说明新节点的第三个参数是数组" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="6">
+                <mxCell id="15" value="False/新节点没有文本节点说明新节点的第三个参数是数组" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="6" edge="1">
                     <mxGeometry x="-0.375" relative="1" as="geometry">
-                        <mxPoint x="430" y="-295" as="targetPoint"/>
+                        <mxPoint x="430" y="-211.25" as="targetPoint"/>
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="6" value="新节点是否含有文本节点" style="rhombus;whiteSpace=wrap;html=1;rounded=1;strokeWidth=2;arcSize=14;" vertex="1" parent="1">
-                    <mxGeometry x="390" y="-455" width="80" height="80" as="geometry"/>
+                <mxCell id="6" value="新节点是否含有文本节点" style="rhombus;whiteSpace=wrap;html=1;rounded=1;strokeWidth=2;arcSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="390" y="-371.25" width="80" height="80" as="geometry"/>
                 </mxCell>
-                <mxCell id="11" value="True" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="8" target="10">
+                <mxCell id="11" value="True" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="8" target="10" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
-                            <mxPoint x="820" y="-415"/>
-                            <mxPoint x="820" y="-415"/>
+                            <mxPoint x="820" y="-331.25"/>
+                            <mxPoint x="820" y="-331.25"/>
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="13" value="False" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="8" target="12">
+                <mxCell id="13" value="False" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="8" target="12" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="8" value="老节点的文本节点是否和新节点的一致" style="rhombus;whiteSpace=wrap;html=1;rounded=1;strokeWidth=2;arcSize=14;" vertex="1" parent="1">
-                    <mxGeometry x="602.95" y="-473.75" width="124.41" height="117.5" as="geometry"/>
+                <mxCell id="8" value="老节点的文本节点是否和新节点的一致" style="rhombus;whiteSpace=wrap;html=1;rounded=1;strokeWidth=2;arcSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="602.95" y="-390" width="124.41" height="117.5" as="geometry"/>
                 </mxCell>
-                <mxCell id="10" value="return" style="whiteSpace=wrap;html=1;rounded=1;strokeWidth=2;arcSize=14;" vertex="1" parent="1">
-                    <mxGeometry x="799.995" y="-445" width="120" height="60" as="geometry"/>
+                <mxCell id="10" value="return" style="whiteSpace=wrap;html=1;rounded=1;strokeWidth=2;arcSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="799.995" y="-361.25" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="12" value="用新节点的文本替换老节点的文本" style="whiteSpace=wrap;html=1;rounded=1;strokeWidth=2;arcSize=14;" vertex="1" parent="1">
-                    <mxGeometry x="607.355" y="-310" width="120" height="60" as="geometry"/>
+                <mxCell id="12" value="用新节点的文本替换老节点的文本" style="whiteSpace=wrap;html=1;rounded=1;strokeWidth=2;arcSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="607.355" y="-226.25" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="16" target="17">
+                <mxCell id="18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="16" target="17" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="16" value="现在的情况：新节点有子节点" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
-                    <mxGeometry x="380" y="-310" width="100" height="60" as="geometry"/>
+                <mxCell id="16" value="现在的情况：新节点有子节点" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="380" y="-226.25" width="100" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="20" value="False" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="17" target="19">
+                <mxCell id="20" value="False" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="17" target="19" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="22" value="True" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="17" target="21">
+                <mxCell id="22" value="True" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="17" target="21" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="17" value="老节点是否含有子节点" style="rhombus;whiteSpace=wrap;html=1;rounded=1;strokeWidth=2;arcSize=14;" vertex="1" parent="1">
-                    <mxGeometry x="390" y="-200" width="80" height="80" as="geometry"/>
+                <mxCell id="17" value="老节点是否含有子节点" style="rhombus;whiteSpace=wrap;html=1;rounded=1;strokeWidth=2;arcSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="390" y="-116.25" width="80" height="80" as="geometry"/>
                 </mxCell>
-                <mxCell id="19" value="1.清空老节点的text&lt;br&gt;2.把newVnode的children添加到DOM中" style="whiteSpace=wrap;html=1;rounded=1;strokeWidth=2;arcSize=14;" vertex="1" parent="1">
-                    <mxGeometry x="530" y="-195" width="120" height="70" as="geometry"/>
+                <mxCell id="19" value="1.清空老节点的text&lt;br&gt;2.把newVnode的children添加到DOM中" style="whiteSpace=wrap;html=1;rounded=1;strokeWidth=2;arcSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="530" y="-111.25" width="120" height="70" as="geometry"/>
                 </mxCell>
-                <mxCell id="21" value="对新旧节点的子节点进行比较" style="whiteSpace=wrap;html=1;rounded=1;strokeWidth=2;arcSize=14;" vertex="1" parent="1">
-                    <mxGeometry x="370" y="-30" width="120" height="60" as="geometry"/>
+                <mxCell id="21" value="对新旧节点的子节点进行比较" style="whiteSpace=wrap;html=1;rounded=1;strokeWidth=2;arcSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="370" y="53.75" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" value="False" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="27" target="6">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="480" y="-410" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="31" value="True" style="edgeStyle=none;html=1;" edge="1" parent="1" source="27" target="30">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" value="oldVnode === newVnode" style="rhombus;whiteSpace=wrap;html=1;rounded=1;strokeWidth=2;arcSize=14;" vertex="1" parent="1">
+                    <mxGeometry x="390" y="-535" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" value="return" style="whiteSpace=wrap;html=1;rounded=1;strokeWidth=2;arcSize=14;" vertex="1" parent="1">
+                    <mxGeometry x="530" y="-525" width="120" height="60" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
