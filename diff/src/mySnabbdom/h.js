@@ -2,6 +2,15 @@ import vNode from "./vNode"
 
 // 编写一个低版本的h函数
 // 未实现函数重载
+
+/**
+ * 
+ * @param {string} sel 
+ * @param {*} b 
+ * @param {*} c 
+ * @returns {vNode}
+ */
+
 export function h(sel, b, c) {
   if (arguments.length !== 3) {
     throw new Error('h函数的参数必须是三个')

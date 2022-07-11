@@ -1,4 +1,3 @@
-import { vnode } from "snabbdom";
 import createElement from "./createElement"
 import vNode from "./vNode"
 
@@ -37,6 +36,7 @@ export default function (oldVnode, newVnode) {
     // 不是同一个节点，插入新的，暴力删除原来的
     const newVnodeElm = createElement(newVnode)
     console.log(newVnode)
+    console.log(newVnodeElm);
 
     // 在这里插入到老节点的前面，并且删除老节点
     oldVnode.elm.parentNode.insertBefore(newVnodeElm, oldVnode.elm)

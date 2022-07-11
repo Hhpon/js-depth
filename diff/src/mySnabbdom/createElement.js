@@ -1,6 +1,11 @@
 // 真正创建节点,将vnode创建dom，不再进行插入
+/**
+ *
+ * @param {vNode} vnode
+ * @returns {Node}
+ */
 export default function createElement(vnode) {
-  // 巴虚拟节点vnode插入到pivot的前面
+  // 把虚拟节点vnode插入到pivot的前面
   let domNode = document.createElement(vnode.sel)
 
   // 有子节点/文本节点
