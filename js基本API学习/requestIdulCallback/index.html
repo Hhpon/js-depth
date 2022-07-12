@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+    <style>
+      #log {
+        height: 500px;
+        overflow-y: scroll;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      演示使用
+      <a href="https://developer.mozilla.org/en-US/docs/Web/API/Background_Tasks_API"> 协作调度幕后任务 </a>
+      使用 <code>requestIdleCallback()</code>
+      方法。
+    </p>
+
+    <div class="container">
+      <div class="label">解码量子丝极谱发射中...</div>
+      <progress id="progress" value="0"></progress>
+      <div class="button" id="startButton">开始</div>
+      <div class="label counter">
+        任务 <span id="currentTaskNumber">0</span> /
+        <span id="totalTaskCount">0</span>
+      </div>
+    </div>
+
+    <div class="logBox">
+      <div class="logHeader">记录</div>
+      <div id="log"></div>
+    </div>
+    <script>
+      // 任务列表
+      let taskList = []
+      // 任务总数
+      let totalTaskCount = 0
+      // 当前任务的编号
+      let currentTaskNumber = 0
+      // 任务方法
+      let taskHandle = null
+      // 总任务数 容器
+      let totalTaskCountElem = document.getElementById("totalTaskCount")
+      // 当前任务编号 容器
+      let currentTaskNumberElem = document.getElementById("currentTaskNumber")
+      // 进度条 元素
+      let progressBarElem = document.getElementById("progress")
+      // 开始 按钮元素
+      let startButtonElem = document.getElementById("startButton")
+      // 日志记录 容器
+      let logElem = document.getElementById("log")
+      // 日志片段
+      let logFragment = null
+      let statusRefreshScheduled = false
+
+      function enqueueTask(taskHandler, taskData) {
+        taskList.push({
+          handler: taskHandler,
+          data: taskData,
+        })
+
+        totalTaskCount++
+        console.log(taskHandle)
+        if (!taskHandle) {
+          taskHandle = requestIdleCallback(runTaskQueue, { timeout: 1000 })
+        }
+
+        scheduleStatusRefresh()
+      }
+
+      function runTaskQueue(deadline) {
+        console.log(deadline.timeRemaining())
+        while ((deadline.timeRemaining() > 0 || deadline.didTimeout) && taskList.length) {
+          let task = taskList.shift()
+          currentTaskNumber++
+
+          task.handler(task.data)
+          scheduleStatusRefresh()
+        }
+
+        if (taskList.length) {
+          taskHandle = requestIdleCallback(runTaskQueue, { timeout: 1000 })
+          console.log(taskHandle)
+        } else {
+          taskHandle = 0
+        }
+      }
+
+      function scheduleStatusRefresh() {
+        if (!statusRefreshScheduled) {
+          requestAnimationFrame(updateDisplay)
+          statusRefreshScheduled = true
+        }
+      }
+
+      function updateDisplay() {
+        // 表示是否滑动到scroll最低端
+        let scrolledToEnd = logElem.scrollHeight - logElem.clientHeight <= logElem.scrollTop + 1
+
+        if (totalTaskCount) {
+          // 初始化进度条显示内容
+          if (progressBarElem.max != totalTaskCount) {
+            totalTaskCountElem.textContent = totalTaskCount
+            progressBarElem.max = totalTaskCount
+          }
+
+          if (progressBarElem.value != currentTaskNumber) {
+            currentTaskNumberElem.textContent = currentTaskNumber
+            progressBarElem.value = currentTaskNumber
+          }
+        }
+
+        if (logFragment) {
+          logElem.appendChild(logFragment)
+          logFragment = null
+        }
+
+        if (scrolledToEnd) {
+          // 滚动到底部
+          logElem.scrollTop = logElem.scrollHeight - logElem.clientHeight
+        }
+
+        statusRefreshScheduled = false
+      }
+
+      function log(text) {
+        if (!logFragment) {
+          logFragment = document.createDocumentFragment()
+        }
+
+        let el = document.createElement("div")
+        el.innerHTML = text
+        logFragment.appendChild(el)
+      }
+
+      function logTaskHandler(data) {
+        log("<strong>Running task #" + currentTaskNumber + "</strong>")
+
+        for (i = 0; i < data.count; i += 1) {
+          log((i + 1).toString() + ". " + data.text)
+        }
+      }
+
+      function getRandomIntInclusive(min, max) {
+        min = Math.ceil(min)
+        max = Math.floor(max)
+        return Math.floor(Math.random() * (max - min + 1) + min)
+      }
+
+      function decodeTechnoStuff() {
+        totalTaskCount = 0
+        currentTaskNumber = 0
+        updateDisplay()
+
+        let n = getRandomIntInclusive(100, 200)
+
+        for (i = 0; i < n; i++) {
+          let taskData = {
+            count: getRandomIntInclusive(75, 150),
+            text: "This text is from task number " + (i + 1).toString() + " of " + n,
+          }
+
+          enqueueTask(logTaskHandler, taskData)
+        }
+      }
+
+      document.getElementById("startButton").addEventListener("click", decodeTechnoStuff, false)
+    </script>
+  </body>
+</html>
