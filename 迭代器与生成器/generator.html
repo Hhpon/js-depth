@@ -8,17 +8,69 @@
   </head>
   <body>
     <script>
-      function* gen() {
-        yield 10
-        x = yield { a: "a" }
-        yield x
+      // function* gen() {
+      //   yield 10
+      //   x = yield { a: "a" }
+      //   yield x
+      // }
+
+      // var gen_obj = gen()
+      // console.log(gen_obj.next()) // 执行 yield 10，返回 10
+      // console.log(gen_obj.next(100)) // 执行 yield 'foo'，返回 'foo'
+      // console.log(gen_obj.next()) // 将 100 赋给上一条 yield 'foo' 的左值，即执行 x=100，返回 100
+      // console.log(gen_obj.next()) // 执行完毕，value 为 undefined，done 为 true
+
+      // function* gen() {
+      //   while (true) {
+      //     try {
+      //       yield 42
+      //     } catch (e) {
+      //       console.log("Error caught!")
+      //     }
+      //   }
+      // }
+
+      // var g = gen()
+      // g.next() // { value: 42, done: false }
+      // console.log(g.throw(new Error("Something went wrong"))) // "Error caught!"
+
+      // var gen = function* gen() {
+      //   try {
+      //     yield console.log("a")
+      //   } catch (e) {
+      //     // ...
+      //     console.log(e)
+      //   }
+      //   try {
+      //     yield console.log("b")
+      //   } catch (error) {}
+      //   yield console.log("c")
+      // }
+
+      // var g = gen()
+      // g.next() // a
+      // g.next() // c
+      // console.log(g.throw()) // b
+
+      var g = function* () {
+        while (true) {
+          yield
+          console.log("内部捕获", e)
+        }
       }
 
-      var gen_obj = gen()
-      console.log(gen_obj.next()) // 执行 yield 10，返回 10
-      console.log(gen_obj.next(100)) // 执行 yield 'foo'，返回 'foo'
-      console.log(gen_obj.next()) // 将 100 赋给上一条 yield 'foo' 的左值，即执行 x=100，返回 100
-      console.log(gen_obj.next()) // 执行完毕，value 为 undefined，done 为 true
+      var i = g()
+      i.next()
+
+      try {
+        i.throw("a")
+        i.throw("b")
+      } catch (e) {
+        console.log("外部捕获", e)
+      }
+      // 外部捕获 a
+
+      console.log(i.next())
     </script>
   </body>
 </html>
