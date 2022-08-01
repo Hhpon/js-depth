@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/d3-flextree@2.0.0/build/d3-flextree.min.js"></script>
+    <script>
+      const flextree = d3.flextree
+      const layout = flextree()
+      const tree = layout.hierarchy({
+        size: [1, 1],
+        children: [{ size: [2, 4] }, { size: [3, 1], children: [{ size: [4, 1] }] }],
+      })
+      layout(tree)
+      tree.each((node) => console.log(`(${node.x}, ${node.y})`))
+    </script>
+  </body>
+</html>

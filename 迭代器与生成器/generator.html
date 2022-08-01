@@ -52,25 +52,66 @@
       // g.next() // c
       // console.log(g.throw()) // b
 
-      var g = function* () {
-        while (true) {
-          yield
-          console.log("内部捕获", e)
-        }
+      // var g = function* () {
+      //   while (true) {
+      //     yield
+      //     console.log("内部捕获", e)
+      //   }
+      // }
+
+      // var i = g()
+      // i.next()
+
+      // try {
+      //   i.throw("a")
+      //   i.throw("b")
+      // } catch (e) {
+      //   console.log("外部捕获", e)
+      // }
+      // // 外部捕获 a
+
+      // console.log(i.next())
+
+      // const g = function* () {
+      //   let index = 0
+      //   while (index < 1000) {
+      //     yield index++
+      //   }
+      // }
+
+      // const i = g()
+      // console.log(i.next())
+      // console.log(i.next())
+      // console.log(i.next())
+      // console.log(i.next())
+      // console.log(g)
+      // const obj = new Object()
+      // obj.a = 1
+      // obj[Symbol.iterator] = function () {
+      //   return { next: () => ({ value: 1, done: true }) }
+      // }
+
+      // for (let key of obj) {
+      //   console.log(key)
+      // }
+
+      function* g() {
+        let x = yield "a"
+        yield 10
+        let y = yield x
+        yield 1
+        yield 3
+        yield y
       }
 
-      var i = g()
-      i.next()
+      const a = g()
 
-      try {
-        i.throw("a")
-        i.throw("b")
-      } catch (e) {
-        console.log("外部捕获", e)
-      }
-      // 外部捕获 a
-
-      console.log(i.next())
+      console.log(a.next())
+      console.log(a.next(30))
+      console.log(a.next(100))
+      console.log(a.next(100))
+      console.log(a.next(100))
+      console.log(a.next(100))
     </script>
   </body>
 </html>
