@@ -1,0 +1,79 @@
+<mxfile host="65bd71144e">
+    <diagram id="t_MveINqfV1ACQ3V8Le5" name="Page-1">
+        <mxGraphModel dx="709" dy="855" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="4" value="" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="2" target="30" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" value="performConcurrentWorkOnRoot" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="522.5" y="10" width="210" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="30" target="31" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" value="WorkLoopConcurrent()" style="swimlane;" parent="1" vertex="1">
+                    <mxGeometry x="482.5" y="160" width="287.5" height="230" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="While(&lt;br&gt;workInProgress &lt;br&gt;!= &lt;br&gt;null&lt;br&gt;&amp;amp;&amp;amp;&lt;br&gt;!shouldYield()&lt;br&gt;) {&lt;br&gt;performUnitOfWork(workInProgress)&lt;br&gt;}" style="rounded=1;whiteSpace=wrap;html=1;" parent="30" vertex="1">
+                    <mxGeometry x="27.5" y="50" width="232.5" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="42" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;" parent="1" source="31" target="38" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" value="perFormUnitWork(workInProgress)" style="swimlane;" parent="1" vertex="1">
+                    <mxGeometry x="336.25" y="480" width="580" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="33" value="unitOfWork: WorkInProgressFiber&lt;br&gt;current: unitOfWork.alternate" style="rounded=1;whiteSpace=wrap;html=1;" parent="31" vertex="1">
+                    <mxGeometry x="35" y="60" width="210" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="34" value="next = beginWork(current, unitOfWork)" style="whiteSpace=wrap;html=1;rounded=1;" parent="31" vertex="1">
+                    <mxGeometry x="305" y="60" width="240" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="35" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;" parent="31" source="33" target="34" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="38" value="beginWork(current, workInProgress, renderLanes)" style="swimlane;" parent="1" vertex="1">
+                    <mxGeometry x="334.38" y="720" width="585.62" height="870" as="geometry"/>
+                </mxCell>
+                <mxCell id="48" value="False" style="edgeStyle=orthogonalEdgeStyle;html=1;" parent="38" source="43" target="47" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="43" value="current&lt;br&gt;!==&lt;br&gt;null" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" parent="38" vertex="1">
+                    <mxGeometry x="110.62" y="175" width="100" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="44" value="此处粗略的把节点根据current 与 null的关系把阶段分成mount与update" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="38" vertex="1">
+                    <mxGeometry x="490" y="40" width="75.62" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="45" value="bailoutOnAlreadyFinishedWork(current, workInProgress, renderLanes)" style="whiteSpace=wrap;html=1;strokeWidth=2;rounded=1;" parent="38" vertex="1">
+                    <mxGeometry x="45.620000000000005" y="375" width="230" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="46" value="True" style="edgeStyle=orthogonalEdgeStyle;html=1;" parent="38" source="43" target="45" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="47" value="updateHostRoot" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;" parent="38" vertex="1">
+                    <mxGeometry x="355.62" y="195" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="53" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;" parent="38" source="50" target="52" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="50" value="reconcileChildren" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;" parent="38" vertex="1">
+                    <mxGeometry x="355.62" y="375" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="51" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;" parent="38" source="47" target="50" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="52" value="current&lt;br&gt;===&lt;br&gt;null" style="rhombus;whiteSpace=wrap;html=1;rounded=1;strokeWidth=2;" parent="38" vertex="1">
+                    <mxGeometry x="375.62" y="505" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="54" value="mountChildFibers" style="whiteSpace=wrap;html=1;rounded=1;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="690" y="1395" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="55" value="True" style="edgeStyle=orthogonalEdgeStyle;html=1;" parent="1" source="52" target="54" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
