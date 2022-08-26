@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #colorCircle {
+        width: 100px;
+        height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="colorCircle">红绿灯</div>
+    <script>
+      const colorCircle = document.getElementById("colorCircle")
+
+      function sleep(duration) {
+        return new Promise((resolve) => {
+          setTimeout(() => {
+            resolve()
+          }, duration)
+        })
+      }
+
+      async function changeColor(color, duration) {
+        colorCircle.style.backgroundColor = color
+        await sleep(duration)
+      }
+
+      async function circle() {
+        while (true) {
+          await changeColor("green", 2000)
+          await changeColor("yellow", 1000)
+          await changeColor("red", 3000)
+        }
+      }
+      circle()
+    </script>
+  </body>
+</html>
