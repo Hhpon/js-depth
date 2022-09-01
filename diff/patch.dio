@@ -1,59 +1,59 @@
 <mxfile host="65bd71144e">
     <diagram id="NWt1ZGQqgqMdKastc531" name="第 1 页">
-        <mxGraphModel dx="-273" dy="1913" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="40" dy="2055" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
-                <mxCell id="37" value="" style="edgeStyle=none;html=1;shadow=0;sketch=1;" edge="1" parent="1" source="35" target="36">
+                <mxCell id="37" value="" style="edgeStyle=none;html=1;shadow=0;sketch=1;" parent="1" source="35" target="36" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="35" value="patchVnode Flow" style="whiteSpace=wrap;html=1;shadow=0;sketch=1;" vertex="1" parent="1">
+                <mxCell id="35" value="patchVnode Flow" style="whiteSpace=wrap;html=1;shadow=0;sketch=1;" parent="1" vertex="1">
                     <mxGeometry x="1470" y="-640" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="39" value="" style="edgeStyle=none;html=1;shadow=0;sketch=1;" edge="1" parent="1" source="36" target="38">
+                <mxCell id="39" value="" style="edgeStyle=none;html=1;shadow=0;sketch=1;" parent="1" source="36" target="38" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="36" value="入参(oldVnode,vnode)" style="whiteSpace=wrap;html=1;shadow=0;sketch=1;" vertex="1" parent="1">
+                <mxCell id="36" value="入参(oldVnode,vnode)" style="whiteSpace=wrap;html=1;shadow=0;sketch=1;" parent="1" vertex="1">
                     <mxGeometry x="1470" y="-500" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="41" value="True" style="edgeStyle=none;html=1;shadow=0;sketch=1;" edge="1" parent="1" source="38" target="40">
+                <mxCell id="41" value="True" style="edgeStyle=none;html=1;shadow=0;sketch=1;" parent="1" source="38" target="40" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="96" value="False" style="edgeStyle=none;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;shadow=0;sketch=1;" edge="1" parent="1" source="38" target="107">
+                <mxCell id="96" value="False" style="edgeStyle=none;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;shadow=0;sketch=1;" parent="1" source="38" target="107" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="1250.5356201450768" y="-290.2493798549235" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="38" value="isUndef(vnode.text)" style="rhombus;whiteSpace=wrap;html=1;shadow=0;sketch=1;rounded=1;" vertex="1" parent="1">
+                <mxCell id="38" value="isUndef(vnode.text)" style="rhombus;whiteSpace=wrap;html=1;shadow=0;sketch=1;rounded=1;" parent="1" vertex="1">
                     <mxGeometry x="1449.38" y="-371.25" width="161.25" height="161.25" as="geometry"/>
                 </mxCell>
-                <mxCell id="43" value="False" style="edgeStyle=none;html=1;shadow=0;sketch=1;" edge="1" parent="1" source="40" target="42">
+                <mxCell id="43" value="False" style="edgeStyle=none;html=1;shadow=0;sketch=1;" parent="1" source="40" target="42" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="45" value="True" style="edgeStyle=none;html=1;shadow=0;sketch=1;" edge="1" parent="1" source="40" target="44">
+                <mxCell id="45" value="True" style="edgeStyle=none;html=1;shadow=0;sketch=1;" parent="1" source="40" target="44" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="40" value="isDef(oldVnode.children)&lt;br&gt;&amp;amp;&amp;amp;&lt;br&gt;isDef(vnode.children)" style="rhombus;whiteSpace=wrap;html=1;shadow=0;sketch=1;rounded=1;" vertex="1" parent="1">
+                <mxCell id="40" value="isDef(oldVnode.children)&lt;br&gt;&amp;amp;&amp;amp;&lt;br&gt;isDef(vnode.children)" style="rhombus;whiteSpace=wrap;html=1;shadow=0;sketch=1;rounded=1;" parent="1" vertex="1">
                     <mxGeometry x="1440.31" y="-89.37" width="179.38" height="179.38" as="geometry"/>
                 </mxCell>
-                <mxCell id="50" value="False" style="edgeStyle=none;html=1;shadow=0;sketch=1;" edge="1" parent="1" source="42" target="49">
+                <mxCell id="50" value="False" style="edgeStyle=none;html=1;shadow=0;sketch=1;" parent="1" source="42" target="49" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="81" value="True" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;shadow=0;sketch=1;" edge="1" parent="1" source="42" target="92">
+                <mxCell id="81" value="True" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;shadow=0;sketch=1;" parent="1" source="42" target="92" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="1700" y="305" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="42" value="isDef(vnode.children)" style="rhombus;whiteSpace=wrap;html=1;shadow=0;sketch=1;rounded=1;" vertex="1" parent="1">
+                <mxCell id="42" value="isDef(vnode.children)" style="rhombus;whiteSpace=wrap;html=1;shadow=0;sketch=1;rounded=1;" parent="1" vertex="1">
                     <mxGeometry x="1444.85" y="219.7" width="170.3" height="170.3" as="geometry"/>
                 </mxCell>
-                <mxCell id="47" value="True" style="edgeStyle=none;html=1;shadow=0;sketch=1;" edge="1" parent="1" source="44" target="46">
+                <mxCell id="47" value="True" style="edgeStyle=none;html=1;shadow=0;sketch=1;" parent="1" source="44" target="46" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="44" value="oldVnode.children&lt;br&gt;!==&lt;br&gt;vnode.children" style="rhombus;whiteSpace=wrap;html=1;shadow=0;sketch=1;rounded=1;" vertex="1" parent="1">
+                <mxCell id="44" value="oldVnode.children&lt;br&gt;!==&lt;br&gt;vnode.children" style="rhombus;whiteSpace=wrap;html=1;shadow=0;sketch=1;rounded=1;" parent="1" vertex="1">
                     <mxGeometry x="1749.38" y="-74.52000000000001" width="149.68" height="149.68" as="geometry"/>
                 </mxCell>
-                <mxCell id="198" style="edgeStyle=orthogonalEdgeStyle;sketch=1;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;shadow=0;curved=1;" edge="1" parent="1" source="46" target="116">
+                <mxCell id="198" style="edgeStyle=orthogonalEdgeStyle;sketch=1;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;shadow=0;curved=1;" parent="1" source="46" target="116" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="2153" y="-70"/>
@@ -61,365 +61,371 @@
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="46" value="updateChildren(elm, oldVnode.children, vnode.children)" style="whiteSpace=wrap;html=1;shadow=0;sketch=1;rounded=1;" vertex="1" parent="1">
+                <mxCell id="46" value="updateChildren(elm, oldVnode.children, vnode.children)" style="whiteSpace=wrap;html=1;shadow=0;sketch=1;rounded=1;" parent="1" vertex="1">
                     <mxGeometry x="1993.9" y="-39.519999999999996" width="159.36" height="79.68" as="geometry"/>
                 </mxCell>
-                <mxCell id="48" value="&lt;div&gt;&lt;b&gt;上方的判断如果是False，则说明oldCh、ch至少有一个是未定义的&lt;/b&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=0;sketch=1;" vertex="1" parent="1">
+                <mxCell id="48" value="&lt;div&gt;&lt;b&gt;上方的判断如果是False，则说明oldCh、ch至少有一个是未定义的&lt;/b&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=0;sketch=1;" parent="1" vertex="1">
                     <mxGeometry x="1370" y="113.75" width="130" height="80" as="geometry"/>
                 </mxCell>
-                <mxCell id="78" value="False" style="edgeStyle=none;html=1;shadow=0;sketch=1;" edge="1" parent="1" source="49" target="77">
+                <mxCell id="78" value="False" style="edgeStyle=none;html=1;shadow=0;sketch=1;" parent="1" source="49" target="77" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="83" value="True" style="edgeStyle=none;html=1;shadow=0;sketch=1;" edge="1" parent="1" source="49" target="82">
+                <mxCell id="83" value="True" style="edgeStyle=none;html=1;shadow=0;sketch=1;" parent="1" source="49" target="82" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="49" value="isDef(oldVnode.children)" style="rhombus;whiteSpace=wrap;html=1;shadow=0;sketch=1;rounded=1;" vertex="1" parent="1">
+                <mxCell id="49" value="isDef(oldVnode.children)" style="rhombus;whiteSpace=wrap;html=1;shadow=0;sketch=1;rounded=1;" parent="1" vertex="1">
                     <mxGeometry x="1442.58" y="520" width="174.85" height="174.85" as="geometry"/>
                 </mxCell>
-                <mxCell id="53" value="VNode" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;shadow=0;sketch=1;" vertex="1" parent="1">
+                <mxCell id="53" value="VNode" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;shadow=0;sketch=1;" parent="1" vertex="1">
                     <mxGeometry x="1230" y="-1016" width="250" height="182" as="geometry"/>
                 </mxCell>
-                <mxCell id="54" value="+ sel: string | undefined" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;shadow=0;sketch=1;" vertex="1" parent="53">
+                <mxCell id="54" value="+ sel: string | undefined" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;shadow=0;sketch=1;" parent="53" vertex="1">
                     <mxGeometry y="26" width="250" height="26" as="geometry"/>
                 </mxCell>
-                <mxCell id="55" value="+ data: VNodeData | undefined" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;shadow=0;sketch=1;" vertex="1" parent="53">
+                <mxCell id="55" value="+ data: VNodeData | undefined" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;shadow=0;sketch=1;" parent="53" vertex="1">
                     <mxGeometry y="52" width="250" height="26" as="geometry"/>
                 </mxCell>
-                <mxCell id="56" value="+ children: Array&lt;VNode | string&gt; | undefined" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;shadow=0;sketch=1;" vertex="1" parent="53">
+                <mxCell id="56" value="+ children: Array&lt;VNode | string&gt; | undefined" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;shadow=0;sketch=1;" parent="53" vertex="1">
                     <mxGeometry y="78" width="250" height="26" as="geometry"/>
                 </mxCell>
-                <mxCell id="57" value="+ elm: Node | undefined" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;shadow=0;sketch=1;" vertex="1" parent="53">
+                <mxCell id="57" value="+ elm: Node | undefined" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;shadow=0;sketch=1;" parent="53" vertex="1">
                     <mxGeometry y="104" width="250" height="26" as="geometry"/>
                 </mxCell>
-                <mxCell id="58" value="+ text: string | undefined" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;shadow=0;sketch=1;" vertex="1" parent="53">
+                <mxCell id="58" value="+ text: string | undefined" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;shadow=0;sketch=1;" parent="53" vertex="1">
                     <mxGeometry y="130" width="250" height="26" as="geometry"/>
                 </mxCell>
-                <mxCell id="59" value="+ key: string | number | symbol | undefined" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;shadow=0;sketch=1;" vertex="1" parent="53">
+                <mxCell id="59" value="+ key: string | number | symbol | undefined" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;shadow=0;sketch=1;" parent="53" vertex="1">
                     <mxGeometry y="156" width="250" height="26" as="geometry"/>
                 </mxCell>
-                <mxCell id="60" value="VNodeData" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;shadow=0;sketch=1;" vertex="1" parent="1">
+                <mxCell id="60" value="VNodeData" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;shadow=0;sketch=1;" parent="1" vertex="1">
                     <mxGeometry x="1620" y="-1120" width="170.31" height="390" as="geometry"/>
                 </mxCell>
-                <mxCell id="61" value="+ props?: Props" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;shadow=0;sketch=1;" vertex="1" parent="60">
+                <mxCell id="61" value="+ props?: Props" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;shadow=0;sketch=1;" parent="60" vertex="1">
                     <mxGeometry y="26" width="170.31" height="26" as="geometry"/>
                 </mxCell>
-                <mxCell id="62" value="+ attrs?: Attrs" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;shadow=0;sketch=1;" vertex="1" parent="60">
+                <mxCell id="62" value="+ attrs?: Attrs" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;shadow=0;sketch=1;" parent="60" vertex="1">
                     <mxGeometry y="52" width="170.31" height="26" as="geometry"/>
                 </mxCell>
-                <mxCell id="63" value="+ class?: Classes" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;shadow=0;sketch=1;" vertex="1" parent="60">
+                <mxCell id="63" value="+ class?: Classes" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;shadow=0;sketch=1;" parent="60" vertex="1">
                     <mxGeometry y="78" width="170.31" height="26" as="geometry"/>
                 </mxCell>
-                <mxCell id="64" value="+ style?: VNodeStyle" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;shadow=0;sketch=1;" vertex="1" parent="60">
+                <mxCell id="64" value="+ style?: VNodeStyle" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;shadow=0;sketch=1;" parent="60" vertex="1">
                     <mxGeometry y="104" width="170.31" height="26" as="geometry"/>
                 </mxCell>
-                <mxCell id="65" value="+ dataset?: DataSet" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;shadow=0;sketch=1;" vertex="1" parent="60">
+                <mxCell id="65" value="+ dataset?: DataSet" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;shadow=0;sketch=1;" parent="60" vertex="1">
                     <mxGeometry y="130" width="170.31" height="26" as="geometry"/>
                 </mxCell>
-                <mxCell id="66" value="+ on?: On" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;shadow=0;sketch=1;" vertex="1" parent="60">
+                <mxCell id="66" value="+ on?: On" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;shadow=0;sketch=1;" parent="60" vertex="1">
                     <mxGeometry y="156" width="170.31" height="26" as="geometry"/>
                 </mxCell>
-                <mxCell id="67" value="+ attachData?: AttachData" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;shadow=0;sketch=1;" vertex="1" parent="60">
+                <mxCell id="67" value="+ attachData?: AttachData" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;shadow=0;sketch=1;" parent="60" vertex="1">
                     <mxGeometry y="182" width="170.31" height="26" as="geometry"/>
                 </mxCell>
-                <mxCell id="68" value="+ hook?: Hooks" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;shadow=0;sketch=1;" vertex="1" parent="60">
+                <mxCell id="68" value="+ hook?: Hooks" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;shadow=0;sketch=1;" parent="60" vertex="1">
                     <mxGeometry y="208" width="170.31" height="26" as="geometry"/>
                 </mxCell>
-                <mxCell id="69" value="+ key?: Key" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;shadow=0;sketch=1;" vertex="1" parent="60">
+                <mxCell id="69" value="+ key?: Key" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;shadow=0;sketch=1;" parent="60" vertex="1">
                     <mxGeometry y="234" width="170.31" height="26" as="geometry"/>
                 </mxCell>
-                <mxCell id="70" value="+ ns?: string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;shadow=0;sketch=1;" vertex="1" parent="60">
+                <mxCell id="70" value="+ ns?: string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;shadow=0;sketch=1;" parent="60" vertex="1">
                     <mxGeometry y="260" width="170.31" height="26" as="geometry"/>
                 </mxCell>
-                <mxCell id="71" value="+ fn?: () =&gt; VNode" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;shadow=0;sketch=1;" vertex="1" parent="60">
+                <mxCell id="71" value="+ fn?: () =&gt; VNode" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;shadow=0;sketch=1;" parent="60" vertex="1">
                     <mxGeometry y="286" width="170.31" height="26" as="geometry"/>
                 </mxCell>
-                <mxCell id="72" value="+ args?: any[]" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;shadow=0;sketch=1;" vertex="1" parent="60">
+                <mxCell id="72" value="+ args?: any[]" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;shadow=0;sketch=1;" parent="60" vertex="1">
                     <mxGeometry y="312" width="170.31" height="26" as="geometry"/>
                 </mxCell>
-                <mxCell id="73" value="+ is?: string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;shadow=0;sketch=1;" vertex="1" parent="60">
+                <mxCell id="73" value="+ is?: string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;shadow=0;sketch=1;" parent="60" vertex="1">
                     <mxGeometry y="338" width="170.31" height="26" as="geometry"/>
                 </mxCell>
-                <mxCell id="74" value="+ [key: string]: any" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;shadow=0;sketch=1;" vertex="1" parent="60">
+                <mxCell id="74" value="+ [key: string]: any" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;shadow=0;sketch=1;" parent="60" vertex="1">
                     <mxGeometry y="364" width="170.31" height="26" as="geometry"/>
                 </mxCell>
-                <mxCell id="76" value="1" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=bottom;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;shadow=0;sketch=1;" edge="1" parent="1" source="56" target="67">
+                <mxCell id="76" value="1" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=bottom;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;shadow=0;sketch=1;" parent="1" source="56" target="67" edge="1">
                     <mxGeometry x="-1" y="3" relative="1" as="geometry">
                         <mxPoint x="1340" y="-666" as="sourcePoint"/>
                         <mxPoint x="1500" y="-666" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="85" value="True" style="edgeStyle=none;html=1;shadow=0;sketch=1;" edge="1" parent="1" source="77" target="84">
+                <mxCell id="85" value="True" style="edgeStyle=none;html=1;shadow=0;sketch=1;" parent="1" source="77" target="84" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="77" value="isDef(oldVnode.text)" style="rhombus;whiteSpace=wrap;html=1;shadow=0;sketch=1;rounded=1;" vertex="1" parent="1">
+                <mxCell id="77" value="isDef(oldVnode.text)" style="rhombus;whiteSpace=wrap;html=1;shadow=0;sketch=1;rounded=1;" parent="1" vertex="1">
                     <mxGeometry x="1451.14" y="820" width="157.73" height="157.73" as="geometry"/>
                 </mxCell>
-                <mxCell id="79" value="最复杂的情况" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=0;sketch=1;" vertex="1" parent="1">
+                <mxCell id="79" value="最复杂的情况" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=0;sketch=1;" parent="1" vertex="1">
                     <mxGeometry x="2035.58" y="-89.37" width="76" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="82" value="RemoveVnodes()" style="whiteSpace=wrap;html=1;shadow=0;sketch=1;rounded=1;" vertex="1" parent="1">
+                <mxCell id="82" value="RemoveVnodes()" style="whiteSpace=wrap;html=1;shadow=0;sketch=1;rounded=1;" parent="1" vertex="1">
                     <mxGeometry x="1724.8549999999998" y="577.425" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="84" value="ClearTextContent()" style="whiteSpace=wrap;html=1;shadow=0;sketch=1;rounded=1;" vertex="1" parent="1">
+                <mxCell id="84" value="ClearTextContent()" style="whiteSpace=wrap;html=1;shadow=0;sketch=1;rounded=1;" parent="1" vertex="1">
                     <mxGeometry x="1707.7350000000001" y="868.865" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="92" value="老节点没有子节点，新节点有子节点的情况" style="swimlane;shadow=0;sketch=1;rounded=1;" vertex="1" parent="1">
+                <mxCell id="92" value="老节点没有子节点，新节点有子节点的情况" style="swimlane;shadow=0;sketch=1;rounded=1;" parent="1" vertex="1">
                     <mxGeometry x="1760" y="150" width="390" height="315.15" as="geometry"/>
                 </mxCell>
-                <mxCell id="90" value="isDef(oldVnode.text)" style="rhombus;whiteSpace=wrap;html=1;shadow=0;sketch=1;rounded=1;" vertex="1" parent="92">
+                <mxCell id="90" value="isDef(oldVnode.text)" style="rhombus;whiteSpace=wrap;html=1;shadow=0;sketch=1;rounded=1;" parent="92" vertex="1">
                     <mxGeometry x="20.000000000000114" y="30.00000000000002" width="157.58" height="157.58" as="geometry"/>
                 </mxCell>
-                <mxCell id="80" value="addNodes(vnode.children)" style="whiteSpace=wrap;html=1;shadow=0;sketch=1;rounded=1;" vertex="1" parent="92">
+                <mxCell id="80" value="addNodes(vnode.children)" style="whiteSpace=wrap;html=1;shadow=0;sketch=1;rounded=1;" parent="92" vertex="1">
                     <mxGeometry x="23.639999999999944" y="220" width="150.3" height="75.15" as="geometry"/>
                 </mxCell>
-                <mxCell id="93" value="ClearTextContent()" style="whiteSpace=wrap;html=1;shadow=0;sketch=1;rounded=1;" vertex="1" parent="92">
+                <mxCell id="93" value="ClearTextContent()" style="whiteSpace=wrap;html=1;shadow=0;sketch=1;rounded=1;" parent="92" vertex="1">
                     <mxGeometry x="250.00000000000023" y="78.79000000000002" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="94" value="True" style="edgeStyle=none;html=1;shadow=0;sketch=1;" edge="1" parent="92" source="90" target="93">
+                <mxCell id="94" value="True" style="edgeStyle=none;html=1;shadow=0;sketch=1;" parent="92" source="90" target="93" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="110" value="True" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;shadow=0;sketch=1;" edge="1" parent="1" source="107" target="111">
+                <mxCell id="110" value="True" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;shadow=0;sketch=1;" parent="1" source="107" target="111" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="1225" y="-119.36999999999966" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="107" value="oldVnode.text &lt;br&gt;!== &lt;br&gt;vnode.text" style="rhombus;whiteSpace=wrap;html=1;shadow=0;sketch=1;rounded=1;" vertex="1" parent="1">
+                <mxCell id="107" value="oldVnode.text &lt;br&gt;!== &lt;br&gt;vnode.text" style="rhombus;whiteSpace=wrap;html=1;shadow=0;sketch=1;rounded=1;" parent="1" vertex="1">
                     <mxGeometry x="1110" y="-355.62" width="130" height="130" as="geometry"/>
                 </mxCell>
-                <mxCell id="111" value="老节点与新节点的文本不同的情况" style="swimlane;shadow=0;sketch=1;" vertex="1" parent="1">
+                <mxCell id="111" value="老节点与新节点的文本不同的情况" style="swimlane;shadow=0;sketch=1;" parent="1" vertex="1">
                     <mxGeometry x="1037.5" y="-120" width="275" height="359.99" as="geometry"/>
                 </mxCell>
-                <mxCell id="113" value="RemoveNodes()" style="whiteSpace=wrap;html=1;shadow=0;sketch=1;" vertex="1" parent="111">
+                <mxCell id="113" value="RemoveNodes()" style="whiteSpace=wrap;html=1;shadow=0;sketch=1;" parent="111" vertex="1">
                     <mxGeometry x="17.5" y="250" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="114" value="" style="edgeStyle=none;html=1;shadow=0;sketch=1;" edge="1" parent="111" source="112" target="113">
+                <mxCell id="114" value="" style="edgeStyle=none;html=1;shadow=0;sketch=1;" parent="111" source="112" target="113" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="112" value="isDef(oldVnode.children)" style="rhombus;whiteSpace=wrap;html=1;shadow=0;sketch=1;" vertex="1" parent="111">
+                <mxCell id="112" value="isDef(oldVnode.children)" style="rhombus;whiteSpace=wrap;html=1;shadow=0;sketch=1;" parent="111" vertex="1">
                     <mxGeometry x="32.5" y="70" width="90" height="90" as="geometry"/>
                 </mxCell>
-                <mxCell id="115" value="oldVnode.text = vnode.text" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;sketch=1;" vertex="1" parent="111">
+                <mxCell id="115" value="oldVnode.text = vnode.text" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;sketch=1;" parent="111" vertex="1">
                     <mxGeometry x="137.5" y="160" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="118" value="" style="edgeStyle=none;html=1;shadow=0;sketch=1;" edge="1" parent="1" source="116" target="117">
+                <mxCell id="118" value="" style="edgeStyle=none;html=1;shadow=0;sketch=1;" parent="1" source="116" target="117" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="116" value="updateChildren" style="whiteSpace=wrap;html=1;shadow=0;sketch=1;" vertex="1" parent="1">
+                <mxCell id="116" value="updateChildren" style="whiteSpace=wrap;html=1;shadow=0;sketch=1;" parent="1" vertex="1">
                     <mxGeometry x="3080" y="30.00999999999999" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="120" value="True" style="edgeStyle=none;html=1;shadow=0;sketch=1;" edge="1" parent="1" source="117" target="119">
+                <mxCell id="120" value="True" style="edgeStyle=none;html=1;shadow=0;sketch=1;" parent="1" source="117" target="119" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="191" value="False" style="edgeStyle=elbowEdgeStyle;html=1;shadow=0;sketch=1;" edge="1" parent="1" source="117" target="190">
+                <mxCell id="191" value="False" style="edgeStyle=elbowEdgeStyle;html=1;shadow=0;sketch=1;" parent="1" source="117" target="190" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="117" value="oldStartIdx&lt;br&gt;&amp;nbsp;&amp;lt;=&lt;br&gt;oldEndIdx&lt;br&gt;&amp;amp;&amp;amp;&lt;br&gt;newStartIdx&lt;br&gt;&amp;lt;=&lt;br&gt;newEndIdx" style="rhombus;whiteSpace=wrap;html=1;shadow=0;sketch=1;" vertex="1" parent="1">
+                <mxCell id="117" value="oldStartIdx&lt;br&gt;&amp;nbsp;&amp;lt;=&lt;br&gt;oldEndIdx&lt;br&gt;&amp;amp;&amp;amp;&lt;br&gt;newStartIdx&lt;br&gt;&amp;lt;=&lt;br&gt;newEndIdx" style="rhombus;whiteSpace=wrap;html=1;shadow=0;sketch=1;" parent="1" vertex="1">
                     <mxGeometry x="3055.01" y="160.01" width="169.99" height="169.99" as="geometry"/>
                 </mxCell>
-                <mxCell id="122" value="True" style="edgeStyle=none;html=1;shadow=0;sketch=1;" edge="1" parent="1" source="119" target="121">
+                <mxCell id="122" value="True" style="edgeStyle=none;html=1;shadow=0;sketch=1;" parent="1" source="119" target="121" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="124" value="" style="edgeStyle=none;html=1;shadow=0;sketch=1;" edge="1" parent="1" source="119" target="123">
+                <mxCell id="124" value="" style="edgeStyle=none;html=1;shadow=0;sketch=1;" parent="1" source="119" target="123" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="119" value="oldStartVnode &lt;br&gt;==&lt;br&gt;null" style="rhombus;whiteSpace=wrap;html=1;shadow=0;sketch=1;" vertex="1" parent="1">
+                <mxCell id="119" value="oldStartVnode &lt;br&gt;==&lt;br&gt;null" style="rhombus;whiteSpace=wrap;html=1;shadow=0;sketch=1;" parent="1" vertex="1">
                     <mxGeometry x="3072.4900000000002" y="440" width="135.01" height="135.01" as="geometry"/>
                 </mxCell>
-                <mxCell id="121" value="oldStartVnode&amp;nbsp;&lt;br&gt;=&lt;br&gt;oldCh[++oldStartIdx]" style="whiteSpace=wrap;html=1;shadow=0;sketch=1;" vertex="1" parent="1">
+                <mxCell id="121" value="oldStartVnode&amp;nbsp;&lt;br&gt;=&lt;br&gt;oldCh[++oldStartIdx]" style="whiteSpace=wrap;html=1;shadow=0;sketch=1;" parent="1" vertex="1">
                     <mxGeometry x="3295.005" y="477.505" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="126" value="True" style="edgeStyle=none;html=1;shadow=0;sketch=1;" edge="1" parent="1" source="123" target="125">
+                <mxCell id="126" value="True" style="edgeStyle=none;html=1;shadow=0;sketch=1;" parent="1" source="123" target="125" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="128" value="" style="edgeStyle=none;html=1;shadow=0;sketch=1;" edge="1" parent="1" source="123" target="127">
+                <mxCell id="128" value="" style="edgeStyle=none;html=1;shadow=0;sketch=1;" parent="1" source="123" target="127" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="123" value="oldEndVnode&lt;br&gt;==&lt;br&gt;null" style="rhombus;whiteSpace=wrap;html=1;shadow=0;sketch=1;" vertex="1" parent="1">
+                <mxCell id="123" value="oldEndVnode&lt;br&gt;==&lt;br&gt;null" style="rhombus;whiteSpace=wrap;html=1;shadow=0;sketch=1;" parent="1" vertex="1">
                     <mxGeometry x="3081.26" y="682.52" width="117.49" height="117.49" as="geometry"/>
                 </mxCell>
-                <mxCell id="125" value="oldEndVnode&amp;nbsp;&lt;br&gt;=&lt;br&gt;oldCh[--oldEndIdx]" style="whiteSpace=wrap;html=1;shadow=0;sketch=1;" vertex="1" parent="1">
+                <mxCell id="125" value="oldEndVnode&amp;nbsp;&lt;br&gt;=&lt;br&gt;oldCh[--oldEndIdx]" style="whiteSpace=wrap;html=1;shadow=0;sketch=1;" parent="1" vertex="1">
                     <mxGeometry x="3295.0050000000006" y="711.265" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="130" value="" style="edgeStyle=none;html=1;shadow=0;sketch=1;" edge="1" parent="1" source="127" target="129">
+                <mxCell id="130" value="" style="edgeStyle=none;html=1;shadow=0;sketch=1;" parent="1" source="127" target="129" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="132" value="True" style="edgeStyle=none;html=1;shadow=0;sketch=1;" edge="1" parent="1" source="127" target="131">
+                <mxCell id="132" value="True" style="edgeStyle=none;html=1;shadow=0;sketch=1;" parent="1" source="127" target="131" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="127" value="newStartVnode&lt;br&gt;==&lt;br&gt;null" style="rhombus;whiteSpace=wrap;html=1;shadow=0;sketch=1;" vertex="1" parent="1">
+                <mxCell id="127" value="newStartVnode&lt;br&gt;==&lt;br&gt;null" style="rhombus;whiteSpace=wrap;html=1;shadow=0;sketch=1;" parent="1" vertex="1">
                     <mxGeometry x="3074.3700000000003" y="920" width="131.25" height="131.25" as="geometry"/>
                 </mxCell>
-                <mxCell id="134" value="True" style="edgeStyle=none;html=1;shadow=0;sketch=1;" edge="1" parent="1" source="129" target="133">
+                <mxCell id="134" value="True" style="edgeStyle=none;html=1;shadow=0;sketch=1;" parent="1" source="129" target="133" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="136" value="" style="edgeStyle=none;html=1;shadow=0;sketch=1;" edge="1" parent="1" source="129" target="135">
+                <mxCell id="136" value="" style="edgeStyle=none;html=1;shadow=0;sketch=1;" parent="1" source="129" target="135" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="129" value="newEndVnode&lt;br&gt;==&lt;br&gt;null" style="rhombus;whiteSpace=wrap;html=1;shadow=0;sketch=1;" vertex="1" parent="1">
+                <mxCell id="129" value="newEndVnode&lt;br&gt;==&lt;br&gt;null" style="rhombus;whiteSpace=wrap;html=1;shadow=0;sketch=1;" parent="1" vertex="1">
                     <mxGeometry x="3080" y="1150" width="120" height="120" as="geometry"/>
                 </mxCell>
-                <mxCell id="131" value="newStartVnode&lt;br&gt;=&lt;br&gt;ch[++newStartIdx]" style="whiteSpace=wrap;html=1;shadow=0;sketch=1;" vertex="1" parent="1">
+                <mxCell id="131" value="newStartVnode&lt;br&gt;=&lt;br&gt;ch[++newStartIdx]" style="whiteSpace=wrap;html=1;shadow=0;sketch=1;" parent="1" vertex="1">
                     <mxGeometry x="3295.0050000000006" y="955.625" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="133" value="newEndVnode&lt;br&gt;=&lt;br&gt;ch[--newEndIdx]" style="whiteSpace=wrap;html=1;shadow=0;sketch=1;" vertex="1" parent="1">
+                <mxCell id="133" value="newEndVnode&lt;br&gt;=&lt;br&gt;ch[--newEndIdx]" style="whiteSpace=wrap;html=1;shadow=0;sketch=1;" parent="1" vertex="1">
                     <mxGeometry x="3295.01" y="1180" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="138" value="True" style="edgeStyle=none;html=1;shadow=0;sketch=1;" edge="1" parent="1" source="135" target="137">
+                <mxCell id="138" value="True" style="edgeStyle=none;html=1;shadow=0;sketch=1;" parent="1" source="135" target="137" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="140" value="" style="edgeStyle=none;html=1;shadow=0;sketch=1;" edge="1" parent="1" source="135" target="139">
+                <mxCell id="140" value="" style="edgeStyle=none;html=1;shadow=0;sketch=1;" parent="1" source="135" target="139" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="135" value="sameVnode(oldStartVnode, newStartVnode)" style="rhombus;whiteSpace=wrap;html=1;shadow=0;sketch=1;" vertex="1" parent="1">
+                <mxCell id="135" value="sameVnode(oldStartVnode, newStartVnode)" style="rhombus;whiteSpace=wrap;html=1;shadow=0;sketch=1;" parent="1" vertex="1">
                     <mxGeometry x="3065.01" y="1370" width="150" height="150" as="geometry"/>
                 </mxCell>
-                <mxCell id="137" value="patchVnode(oldStartVnode, newStartVnode)&lt;br&gt;oldStartVnode = oldCh[++oldStartIdx]&lt;br&gt;newStartVnode = newStartVnode[++newStartIdx]" style="whiteSpace=wrap;html=1;shadow=0;sketch=1;" vertex="1" parent="1">
+                <mxCell id="137" value="patchVnode(oldStartVnode, newStartVnode)&lt;br&gt;oldStartVnode = oldCh[++oldStartIdx]&lt;br&gt;newStartVnode = newStartVnode[++newStartIdx]" style="whiteSpace=wrap;html=1;shadow=0;sketch=1;" parent="1" vertex="1">
                     <mxGeometry x="3310.01" y="1397.5" width="289.99" height="95" as="geometry"/>
                 </mxCell>
-                <mxCell id="142" value="True" style="edgeStyle=none;html=1;shadow=0;sketch=1;" edge="1" parent="1" source="139" target="141">
+                <mxCell id="142" value="True" style="edgeStyle=none;html=1;shadow=0;sketch=1;" parent="1" source="139" target="141" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="144" value="" style="edgeStyle=none;html=1;shadow=0;sketch=1;" edge="1" parent="1" source="139" target="143">
+                <mxCell id="144" value="" style="edgeStyle=none;html=1;shadow=0;sketch=1;" parent="1" source="139" target="143" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="139" value="sameVnode(oldEndVnode, newEndVnode)" style="rhombus;whiteSpace=wrap;html=1;shadow=0;sketch=1;" vertex="1" parent="1">
+                <mxCell id="139" value="sameVnode(oldEndVnode, newEndVnode)" style="rhombus;whiteSpace=wrap;html=1;shadow=0;sketch=1;" parent="1" vertex="1">
                     <mxGeometry x="3065.01" y="1600" width="150" height="150" as="geometry"/>
                 </mxCell>
-                <mxCell id="141" value="patchVnode(oldEndVnode, newEndVnode)&lt;br&gt;oldEndVnode = oldCh[--oldEndIdx]&lt;br&gt;newEndVnode = ch[--newEndIdx]" style="whiteSpace=wrap;html=1;shadow=0;sketch=1;" vertex="1" parent="1">
+                <mxCell id="141" value="patchVnode(oldEndVnode, newEndVnode)&lt;br&gt;oldEndVnode = oldCh[--oldEndIdx]&lt;br&gt;newEndVnode = ch[--newEndIdx]" style="whiteSpace=wrap;html=1;shadow=0;sketch=1;" parent="1" vertex="1">
                     <mxGeometry x="3310.01" y="1641.25" width="289.99" height="67.5" as="geometry"/>
                 </mxCell>
-                <mxCell id="146" value="True" style="edgeStyle=none;html=1;shadow=0;sketch=1;" edge="1" parent="1" source="143" target="145">
+                <mxCell id="146" value="True" style="edgeStyle=none;html=1;shadow=0;sketch=1;" parent="1" source="143" target="145" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="148" value="" style="edgeStyle=none;html=1;shadow=0;sketch=1;" edge="1" parent="1" source="143" target="147">
+                <mxCell id="148" value="" style="edgeStyle=none;html=1;shadow=0;sketch=1;" parent="1" source="143" target="147" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="143" value="sameVnode(oldStartVnode, newEndVnode)" style="rhombus;whiteSpace=wrap;html=1;shadow=0;sketch=1;" vertex="1" parent="1">
+                <mxCell id="143" value="sameVnode(oldStartVnode, newEndVnode)" style="rhombus;whiteSpace=wrap;html=1;shadow=0;sketch=1;" parent="1" vertex="1">
                     <mxGeometry x="3065.01" y="1830" width="150" height="150" as="geometry"/>
                 </mxCell>
-                <mxCell id="145" value="patchVnode(oldStartVnode, newEndVnode)&lt;br&gt;api.insertBefore(parentElm, oldStartVnode.elm, api.nextSibling(oldEndVnode.elm))&lt;br&gt;oldStartVnode = oldCh[++oldStartIdx]&lt;br&gt;newEndVnode = ch[--newEndIdx]" style="whiteSpace=wrap;html=1;shadow=0;sketch=1;" vertex="1" parent="1">
+                <mxCell id="145" value="patchVnode(oldStartVnode, newEndVnode)&lt;br&gt;api.insertBefore(parentElm, oldStartVnode.elm, api.nextSibling(oldEndVnode.elm))&lt;br&gt;oldStartVnode = oldCh[++oldStartIdx]&lt;br&gt;newEndVnode = ch[--newEndIdx]" style="whiteSpace=wrap;html=1;shadow=0;sketch=1;" parent="1" vertex="1">
                     <mxGeometry x="3312.51" y="1857.5" width="284.99" height="95" as="geometry"/>
                 </mxCell>
-                <mxCell id="150" value="" style="edgeStyle=none;html=1;shadow=0;sketch=1;" edge="1" parent="1" source="147" target="149">
+                <mxCell id="150" value="" style="edgeStyle=none;html=1;shadow=0;sketch=1;" parent="1" source="147" target="149" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="152" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;shadow=0;sketch=1;" edge="1" parent="1" source="147" target="151">
+                <mxCell id="152" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;shadow=0;sketch=1;" parent="1" source="147" target="151" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="147" value="sameVnode(oldEndVnode, newStartVnode)" style="rhombus;whiteSpace=wrap;html=1;shadow=0;sketch=1;" vertex="1" parent="1">
+                <mxCell id="147" value="sameVnode(oldEndVnode, newStartVnode)" style="rhombus;whiteSpace=wrap;html=1;shadow=0;sketch=1;" parent="1" vertex="1">
                     <mxGeometry x="3065.01" y="2060" width="150" height="150" as="geometry"/>
                 </mxCell>
-                <mxCell id="149" value="patchVnode(oldEndVnode, newStartVnode)&lt;br&gt;api.insertBefore(parcentElm, oldEndVnode.elm, oldStartVnode.elm)&lt;br&gt;oldEndVnode = oldCh[--oldEndIdx]&lt;br&gt;newStartVnode = ch[++newStartIdx]" style="whiteSpace=wrap;html=1;shadow=0;sketch=1;" vertex="1" parent="1">
+                <mxCell id="149" value="patchVnode(oldEndVnode, newStartVnode)&lt;br&gt;api.insertBefore(parcentElm, oldEndVnode.elm, oldStartVnode.elm)&lt;br&gt;oldEndVnode = oldCh[--oldEndIdx]&lt;br&gt;newStartVnode = ch[++newStartIdx]" style="whiteSpace=wrap;html=1;shadow=0;sketch=1;" parent="1" vertex="1">
                     <mxGeometry x="3315.01" y="2082.5" width="279.99" height="105" as="geometry"/>
                 </mxCell>
-                <mxCell id="189" style="edgeStyle=elbowEdgeStyle;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;shadow=0;sketch=1;" edge="1" parent="1" source="151" target="117">
+                <mxCell id="189" style="edgeStyle=elbowEdgeStyle;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;shadow=0;sketch=1;" parent="1" source="151" target="117" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="3660" y="1580"/>
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="151" value="首尾指针无法match" style="swimlane;horizontal=0;shadow=0;sketch=1;" vertex="1" parent="1">
+                <mxCell id="151" value="首尾指针无法match" style="swimlane;horizontal=0;shadow=0;sketch=1;" parent="1" vertex="1">
                     <mxGeometry x="2799.99" y="2320" width="680" height="1170" as="geometry"/>
                 </mxCell>
-                <mxCell id="157" value="初始化oldKeyToIdx" style="swimlane;shadow=0;sketch=1;" vertex="1" parent="151">
+                <mxCell id="157" value="初始化oldKeyToIdx" style="swimlane;shadow=0;sketch=1;" parent="151" vertex="1">
                     <mxGeometry x="240" y="20" width="200" height="210" as="geometry"/>
                 </mxCell>
-                <mxCell id="154" value="oldKeyToIdx&lt;br&gt;=&lt;br&gt;createKeyToOldIdx()" style="whiteSpace=wrap;html=1;shadow=0;sketch=1;" vertex="1" parent="157">
+                <mxCell id="154" value="oldKeyToIdx&lt;br&gt;=&lt;br&gt;createKeyToOldIdx()" style="whiteSpace=wrap;html=1;shadow=0;sketch=1;" parent="157" vertex="1">
                     <mxGeometry x="40" y="140" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="153" value="oldKeyToIdx&lt;br&gt;===&lt;br&gt;undefined" style="rhombus;whiteSpace=wrap;html=1;shadow=0;sketch=1;" vertex="1" parent="157">
+                <mxCell id="153" value="oldKeyToIdx&lt;br&gt;===&lt;br&gt;undefined" style="rhombus;whiteSpace=wrap;html=1;shadow=0;sketch=1;" parent="157" vertex="1">
                     <mxGeometry x="60" y="30" width="80" height="80" as="geometry"/>
                 </mxCell>
-                <mxCell id="155" value="True" style="edgeStyle=none;html=1;shadow=0;sketch=1;" edge="1" parent="157" source="153" target="154">
+                <mxCell id="155" value="True" style="edgeStyle=none;html=1;shadow=0;sketch=1;" parent="157" source="153" target="154" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="158" value="idxInOld = oldKeyToIdx[newStartVnode.key]" style="whiteSpace=wrap;html=1;fontStyle=1;startSize=23;shadow=0;sketch=1;" vertex="1" parent="151">
+                <mxCell id="158" value="idxInOld = oldKeyToIdx[newStartVnode.key]" style="whiteSpace=wrap;html=1;fontStyle=1;startSize=23;shadow=0;sketch=1;" parent="151" vertex="1">
                     <mxGeometry x="213.75" y="290" width="252.5" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="159" value="" style="edgeStyle=none;html=1;shadow=0;sketch=1;" edge="1" parent="151" source="157" target="158">
+                <mxCell id="159" value="" style="edgeStyle=none;html=1;shadow=0;sketch=1;" parent="151" source="157" target="158" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="161" value="" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;shadow=0;sketch=1;" edge="1" parent="151" source="158" target="172">
+                <mxCell id="161" value="" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;shadow=0;sketch=1;" parent="151" source="158" target="172" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="237.5" y="420" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="172" value="idxInOld的取值造成的结果导向" style="swimlane;shadow=0;sketch=1;" vertex="1" parent="151">
+                <mxCell id="172" value="idxInOld的取值造成的结果导向" style="swimlane;shadow=0;sketch=1;" parent="151" vertex="1">
                     <mxGeometry x="60" y="380" width="560" height="630" as="geometry"/>
                 </mxCell>
-                <mxCell id="174" value="isUndef(idxInOld)" style="rhombus;whiteSpace=wrap;html=1;fontStyle=1;startSize=23;shadow=0;sketch=1;" vertex="1" parent="172">
+                <mxCell id="174" value="isUndef(idxInOld)" style="rhombus;whiteSpace=wrap;html=1;fontStyle=1;startSize=23;shadow=0;sketch=1;" parent="172" vertex="1">
                     <mxGeometry x="95.63000000000011" y="40" width="120" height="120" as="geometry"/>
                 </mxCell>
-                <mxCell id="175" value="elmToMove = oldCh[idxInOld]" style="whiteSpace=wrap;html=1;fontStyle=1;startSize=23;shadow=0;sketch=1;" vertex="1" parent="172">
+                <mxCell id="175" value="elmToMove = oldCh[idxInOld]" style="whiteSpace=wrap;html=1;fontStyle=1;startSize=23;shadow=0;sketch=1;" parent="172" vertex="1">
                     <mxGeometry x="95.63000000000011" y="230" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="173" value="" style="edgeStyle=none;html=1;shadow=0;sketch=1;" edge="1" parent="172" source="174" target="175">
+                <mxCell id="173" value="" style="edgeStyle=none;html=1;shadow=0;sketch=1;" parent="172" source="174" target="175" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="177" value="patchVnode(elmToMove, newStartVnode)&lt;br&gt;oldCh[idxInOld] = undefined&lt;br&gt;api.insertBefore(parentElm, elmToMove.elm, oldStartVnode.elm)" style="whiteSpace=wrap;html=1;fontStyle=1;startSize=23;shadow=0;sketch=1;" vertex="1" parent="172">
+                <mxCell id="177" value="patchVnode(elmToMove, newStartVnode)&lt;br&gt;oldCh[idxInOld] = undefined&lt;br&gt;api.insertBefore(parentElm, elmToMove.elm, oldStartVnode.elm)" style="whiteSpace=wrap;html=1;fontStyle=1;startSize=23;shadow=0;sketch=1;" parent="172" vertex="1">
                     <mxGeometry x="66.88000000000011" y="510" width="177.5" height="110" as="geometry"/>
                 </mxCell>
-                <mxCell id="178" value="api.insertBefore(parentElm, createElm(newStartVnode, insertedVnodeQueue))" style="whiteSpace=wrap;html=1;fontStyle=1;startSize=23;shadow=0;sketch=1;" vertex="1" parent="172">
+                <mxCell id="178" value="api.insertBefore(parentElm, createElm(newStartVnode, insertedVnodeQueue))" style="whiteSpace=wrap;html=1;fontStyle=1;startSize=23;shadow=0;sketch=1;" parent="172" vertex="1">
                     <mxGeometry x="295.6300000000001" y="70" width="197.5" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="179" value="True" style="edgeStyle=none;html=1;shadow=0;sketch=1;" edge="1" parent="172" source="174" target="178">
+                <mxCell id="179" value="True" style="edgeStyle=none;html=1;shadow=0;sketch=1;" parent="172" source="174" target="178" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="180" value="True" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;shadow=0;sketch=1;" edge="1" parent="172" source="182" target="200">
+                <mxCell id="180" value="True" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;shadow=0;sketch=1;" parent="172" source="182" target="200" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="293.1300000000001" y="400" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="181" value="" style="edgeStyle=none;html=1;shadow=0;sketch=1;" edge="1" parent="172" source="182" target="177">
+                <mxCell id="181" value="" style="edgeStyle=none;html=1;shadow=0;sketch=1;" parent="172" source="182" target="177" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="182" value="elmToMove.sel&amp;nbsp;&lt;br&gt;!==&lt;br&gt;newStartVnode.sel" style="rhombus;whiteSpace=wrap;html=1;fontStyle=1;startSize=23;shadow=0;sketch=1;" vertex="1" parent="172">
+                <mxCell id="182" value="elmToMove.sel&amp;nbsp;&lt;br&gt;!==&lt;br&gt;newStartVnode.sel" style="rhombus;whiteSpace=wrap;html=1;fontStyle=1;startSize=23;shadow=0;sketch=1;" parent="172" vertex="1">
                     <mxGeometry x="115.63000000000011" y="360" width="80" height="80" as="geometry"/>
                 </mxCell>
-                <mxCell id="183" value="" style="edgeStyle=none;html=1;shadow=0;sketch=1;" edge="1" parent="172" source="175" target="182">
+                <mxCell id="183" value="" style="edgeStyle=none;html=1;shadow=0;sketch=1;" parent="172" source="175" target="182" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="184" value="isUndef(idxInOld)" style="rhombus;whiteSpace=wrap;html=1;fontStyle=1;startSize=23;shadow=0;sketch=1;" vertex="1" parent="172">
+                <mxCell id="184" value="isUndef(idxInOld)" style="rhombus;whiteSpace=wrap;html=1;fontStyle=1;startSize=23;shadow=0;sketch=1;" parent="172" vertex="1">
                     <mxGeometry x="95.63000000000011" y="40" width="120" height="120" as="geometry"/>
                 </mxCell>
-                <mxCell id="185" value="api.insertBefore(parentElm, createElm(newStartVnode, insertedVnodeQueue),oldStartVnode.elm)" style="whiteSpace=wrap;html=1;fontStyle=1;startSize=23;shadow=0;sketch=1;" vertex="1" parent="172">
+                <mxCell id="185" value="api.insertBefore(parentElm, createElm(newStartVnode, insertedVnodeQueue),oldStartVnode.elm)" style="whiteSpace=wrap;html=1;fontStyle=1;startSize=23;shadow=0;sketch=1;" parent="172" vertex="1">
                     <mxGeometry x="295.63" y="70" width="244.37" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="186" value="elmToMove = oldCh[idxInOld]" style="whiteSpace=wrap;html=1;fontStyle=1;startSize=23;shadow=0;sketch=1;" vertex="1" parent="172">
+                <mxCell id="186" value="elmToMove = oldCh[idxInOld]" style="whiteSpace=wrap;html=1;fontStyle=1;startSize=23;shadow=0;sketch=1;" parent="172" vertex="1">
                     <mxGeometry x="95.63000000000011" y="230" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="200" value="api.insertBefore(parentElm, createElm(newStartVnode, insertedVnodeQueue),oldStartVnode.elm)" style="whiteSpace=wrap;html=1;fontStyle=1;startSize=23;shadow=0;sketch=1;" vertex="1" parent="172">
+                <mxCell id="200" value="api.insertBefore(parentElm, createElm(newStartVnode, insertedVnodeQueue),oldStartVnode.elm)" style="whiteSpace=wrap;html=1;fontStyle=1;startSize=23;shadow=0;sketch=1;" parent="172" vertex="1">
                     <mxGeometry x="295.63" y="370" width="240" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="187" value="newStartVnode = ch[++newStartIdx]" style="whiteSpace=wrap;html=1;fontStyle=1;startSize=23;shadow=0;sketch=1;" vertex="1" parent="151">
+                <mxCell id="187" value="newStartVnode = ch[++newStartIdx]" style="whiteSpace=wrap;html=1;fontStyle=1;startSize=23;shadow=0;sketch=1;" parent="151" vertex="1">
                     <mxGeometry x="280" y="1090" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="188" value="" style="edgeStyle=none;html=1;shadow=0;sketch=1;" edge="1" parent="151" source="172" target="187">
+                <mxCell id="188" value="" style="edgeStyle=none;html=1;shadow=0;sketch=1;" parent="151" source="172" target="187" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="193" value="True" style="edgeStyle=elbowEdgeStyle;html=1;shadow=0;sketch=1;" edge="1" parent="1" source="190" target="192">
+                <mxCell id="201" value="oldKeyToIdx = {&lt;br&gt;key: index&lt;br&gt;}" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="151">
+                    <mxGeometry x="470" y="140" width="80.01" height="65" as="geometry"/>
+                </mxCell>
+                <mxCell id="202" value="通过新节点的key查看原list中是否含有对应的节点的下标" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="151">
+                    <mxGeometry x="490.01" y="287.5" width="129.99" height="65" as="geometry"/>
+                </mxCell>
+                <mxCell id="193" value="True" style="edgeStyle=elbowEdgeStyle;html=1;shadow=0;sketch=1;" parent="1" source="190" target="192" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="190" value="oldStartIdx&lt;br&gt;&amp;nbsp;&amp;lt;=&lt;br&gt;oldEndIdx&lt;br&gt;||&lt;br&gt;newStartIdx&lt;br&gt;&amp;lt;=&lt;br&gt;newEndIdx" style="rhombus;whiteSpace=wrap;html=1;shadow=0;sketch=1;" vertex="1" parent="1">
+                <mxCell id="190" value="oldStartIdx&lt;br&gt;&amp;nbsp;&amp;lt;=&lt;br&gt;oldEndIdx&lt;br&gt;||&lt;br&gt;newStartIdx&lt;br&gt;&amp;lt;=&lt;br&gt;newEndIdx" style="rhombus;whiteSpace=wrap;html=1;shadow=0;sketch=1;" parent="1" vertex="1">
                     <mxGeometry x="2680.0000000000005" y="160.01" width="169.99" height="169.99" as="geometry"/>
                 </mxCell>
-                <mxCell id="195" value="True" style="edgeStyle=elbowEdgeStyle;html=1;shadow=0;sketch=1;" edge="1" parent="1" source="192" target="194">
+                <mxCell id="195" value="True" style="edgeStyle=elbowEdgeStyle;html=1;shadow=0;sketch=1;" parent="1" source="192" target="194" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="197" value="" style="edgeStyle=elbowEdgeStyle;html=1;shadow=0;sketch=1;" edge="1" parent="1" source="192" target="196">
+                <mxCell id="197" value="" style="edgeStyle=elbowEdgeStyle;html=1;shadow=0;sketch=1;" parent="1" source="192" target="196" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="192" value="oldStartIdx &amp;gt; oldEndIdx" style="rhombus;whiteSpace=wrap;html=1;shadow=0;sketch=1;" vertex="1" parent="1">
+                <mxCell id="192" value="oldStartIdx &amp;gt; oldEndIdx" style="rhombus;whiteSpace=wrap;html=1;shadow=0;sketch=1;" parent="1" vertex="1">
                     <mxGeometry x="2724.9950000000003" y="454.995" width="80" height="80" as="geometry"/>
                 </mxCell>
-                <mxCell id="194" value="before = newCh[newEndIdx + 1] == null ? null : newCh[newEndIdx&amp;nbsp; + 1].elm&lt;br&gt;addVnodes(parentElm, before, newCh, newStartIdx, newEndIdx, insertedVnodeQueue)" style="whiteSpace=wrap;html=1;shadow=0;sketch=1;" vertex="1" parent="1">
+                <mxCell id="194" value="before = newCh[newEndIdx + 1] == null ? null : newCh[newEndIdx&amp;nbsp; + 1].elm&lt;br&gt;addVnodes(parentElm, before, newCh, newStartIdx, newEndIdx, insertedVnodeQueue)" style="whiteSpace=wrap;html=1;shadow=0;sketch=1;" parent="1" vertex="1">
                     <mxGeometry x="2627.5" y="625" width="275" height="105.01" as="geometry"/>
                 </mxCell>
-                <mxCell id="196" value="removeVnode(parentElm, oldCh, oldStartIdx, oldEndIdx)" style="whiteSpace=wrap;html=1;shadow=0;sketch=1;" vertex="1" parent="1">
+                <mxCell id="196" value="removeVnode(parentElm, oldCh, oldStartIdx, oldEndIdx)" style="whiteSpace=wrap;html=1;shadow=0;sketch=1;" parent="1" vertex="1">
                     <mxGeometry x="2460" y="465" width="205" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="199" value="1. VNode 的text 与 Children 是互斥的，二者只能有一个存在&lt;br&gt;2. diff算法可以使我们最小化的更新原有节点" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=0;" vertex="1" parent="1">
+                <mxCell id="199" value="1. VNode 的text 与 Children 是互斥的，二者只能有一个存在&lt;br&gt;2. diff算法可以使我们最小化的更新原有节点" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=0;" parent="1" vertex="1">
                     <mxGeometry x="1780" y="-630" width="300" height="50" as="geometry"/>
                 </mxCell>
             </root>
