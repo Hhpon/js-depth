@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const newEvent = () => {
+        // handlerStore = {
+        //   type: [{fn, once}]
+        // }
+        const handlerStore = {}
+        return {
+          on: (type, handler) => {
+            if (handlerStore[type]) {
+              handlerStore[type].push({ fn: handler, once: false })
+            } else {
+              handlerStore[type] = [{ fn: handler, once: false }]
+            }
+          },
+          off: (type, handler) => {
+            if (handlerStore[type]) {
+              for (let i = 0; i < handlerStore[type].length; i++) {
+                if (handlerStore[type][i].fn === handler) {
+                  handlerStore[type].splice(i, 1)
+                  break
+                }
+              }
+            }
+          },
+          once: (type, handler) => {
+            if (handlerStore[type]) {
+              handlerStore[type].push({ fn: handler, once: true })
+            } else {
+              handlerStore[type] = [{ fn: handler, once: true }]
+            }
+          },
+          trigger: function (type, data) {
+            if (handlerStore[type]) {
+              for (let i = 0; i < handlerStore[type].length; i++) {
+                handlerStore[type][i].fn(data)
+                if (handlerStore[type][i].once) {
+                  console.log(this)
+                  this.off(type, handlerStore[type][i].fn)
+                }
+              }
+            }
+          },
+        }
+      }
+
+      const event1 = newEvent()
+      function click() {
+        console.log("click")
+      }
+      event1.on("click", click)
+      event1.trigger("click", "")
+
+      function dbClick() {
+        console.log("dbClick")
+      }
+
+      event1.once("dbClick", dbClick)
+      event1.trigger("dbClick", "")
+
+      event1.trigger("click", "")
+      event1.trigger("dbClick", "")
+
+      function change() {}
+    </script>
+  </body>
+</html>
